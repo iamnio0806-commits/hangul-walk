@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/hangul-walk/',
   plugins: [react()],
   server: {
     host: true,
