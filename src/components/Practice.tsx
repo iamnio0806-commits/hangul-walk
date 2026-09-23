@@ -352,17 +352,27 @@ function FlashPractice({
 
   return (
     <div className="practice-block">
-      <p className="practice-label">閃卡 · 不是考試</p>
+      <p className="practice-label">閃卡＋句子 · 不是考試</p>
       <p className="practice-prompt">{prompt}</p>
-      <div className="flash-card" onClick={() => { setRevealed(true); speakKo(item.ko) }}>
+      <div
+        className="flash-card"
+        onClick={() => {
+          setRevealed(true)
+          speakKo(item.example || item.ko)
+        }}
+      >
         <p className="flash-ko">{item.ko}</p>
+        {item.example && <p className="flash-sentence">{item.example}</p>}
         {revealed ? (
-          <p className="flash-zh">
-            {item.zh}
-            {item.roman ? ` · ${item.roman}` : ''}
-          </p>
+          <>
+            <p className="flash-zh">
+              {item.zh}
+              {item.roman ? ` · ${item.roman}` : ''}
+            </p>
+            {item.exampleZh && <p className="flash-sentence-zh">{item.exampleZh}</p>}
+          </>
         ) : (
-          <p className="flash-zh mute">點一下顯示意思</p>
+          <p className="flash-zh mute">點一下顯示意思與翻譯</p>
         )}
       </div>
       <div className="cta-row">
@@ -371,10 +381,17 @@ function FlashPractice({
           className="btn-ghost"
           onClick={() => {
             setRevealed(true)
-            speakKo(item.ko)
+            speakKo(item.example || item.ko)
           }}
         >
           顯示意思
+        </button>
+        <button
+          type="button"
+          className="btn-ghost"
+          onClick={() => speakKo(item.example || item.ko)}
+        >
+          聽句子
         </button>
         <button type="button" className="btn-primary" onClick={next} disabled={!revealed}>
           {seen + 1 >= items.length ? '看完了' : '下一個'}

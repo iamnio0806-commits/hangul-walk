@@ -3,8 +3,10 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { TodayPanel, StagePanel } from './components/LearnHub'
 import { LessonView } from './components/LessonView'
 import { Garden } from './components/Garden'
+import { VocabBrowse } from './components/VocabBrowse'
 import { useProgress } from './hooks/useProgress'
 import { getLesson, totalLessons, type Stage } from './data/curriculum'
+import { vocabulary } from './data/vocabulary'
 
 type Tab = 'today' | Stage | 'garden'
 type Screen =
@@ -24,6 +26,7 @@ export default function App() {
   const [screen, setScreen] = useState<Screen>({ kind: 'hub', tab: 'today' })
   const [showName, setShowName] = useState(false)
   const [draftName, setDraftName] = useState('')
+  const [vocabMode, setVocabMode] = useState<'browse' | 'packs'>('browse')
   const [welcomed, setWelcomed] = useState(() => {
     try {
       return localStorage.getItem('hangul-walk-welcomed') === '1'
@@ -38,7 +41,10 @@ export default function App() {
     setScreen({ kind: 'lesson', lessonId, from: tab === 'garden' ? 'today' : tab })
   }
 
-  const goTab = (t: Tab) => setScreen({ kind: 'hub', tab: t })
+  const goTab = (t: Tab) => {
+    if (t === 'vocab') setVocabMode('browse')
+    setScreen({ kind: 'hub', tab: t })
+  }
 
   const enter = () => {
     if (!state.name) {
@@ -88,9 +94,10 @@ export default function App() {
                 한글산책
               </motion.h1>
               <p className="hero-brand-sub">韓文散步</p>
-              <p className="hero-line">先九音，再拼字，再單字。沒有考試。</p>
+              <p className="hero-line">先九音，再拼字，再單字＋句子。沒有考試。</p>
               <p className="hero-support">
-                跟你的德文自學同一套節奏：先把聲音聽熟 → 拼出音節 → 一批一批收單字。做完自己按「我會了」。
+                跟你的德文自學同一套節奏：聲音 → 拼字 → {vocabulary.length}{' '}
+                個單字（每個都有例句）。做完自己按「我會了」。
               </p>
               <div className="cta-row">
                 <button type="button" className="btn-primary" onClick={enter}>
@@ -190,22 +197,41 @@ export default function App() {
             </motion.div>
           )}
 
-          {screen.kind === 'hub' &&
-            (screen.tab === 'sounds' || screen.tab === 'spelling' || screen.tab === 'vocab') && (
-              <motion.div
-                key={screen.tab}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-              >
+          {screen.kind === 'hub' && (screen.tab === 'sounds' || screen.tab === 'spelling') && (
+            <motion.div
+              key={screen.tab}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <StagePanel
+                stage={screen.tab}
+                completed={state.completed}
+                onOpenLesson={openLesson}
+                onBack={() => goTab('today')}
+              />
+            </motion.div>
+          )}
+
+          {screen.kind === 'hub' && screen.tab === 'vocab' && (
+            <motion.div
+              key={`vocab-${vocabMode}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              {vocabMode === 'browse' ? (
+                <VocabBrowse onOpenPacks={() => setVocabMode('packs')} />
+              ) : (
                 <StagePanel
-                  stage={screen.tab}
+                  stage="vocab"
                   completed={state.completed}
                   onOpenLesson={openLesson}
-                  onBack={() => goTab('today')}
+                  onBack={() => setVocabMode('browse')}
                 />
-              </motion.div>
-            )}
+              )}
+            </motion.div>
+          )}
 
           {screen.kind === 'hub' && screen.tab === 'garden' && (
             <motion.div

@@ -1,0 +1,4002 @@
+[
+  {
+    "id": "annyeonghaseyo",
+    "ko": "안녕하세요",
+    "zh": "你好（禮貌）",
+    "roman": "annyeonghaseyo",
+    "category": "問候",
+    "example": "안녕하세요! 만나서 반가워요.",
+    "exampleZh": "你好！很高興認識你。",
+    "level": "入門"
+  },
+  {
+    "id": "annyeong",
+    "ko": "안녕",
+    "zh": "嗨／掰",
+    "roman": "annyeong",
+    "category": "問候",
+    "example": "안녕! 잘 지내?",
+    "exampleZh": "嗨！過得好嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "gamsahamnida",
+    "ko": "감사합니다",
+    "zh": "謝謝（正式）",
+    "roman": "gamsahamnida",
+    "category": "問候",
+    "example": "도와주셔서 감사합니다.",
+    "exampleZh": "謝謝您幫忙。",
+    "level": "入門"
+  },
+  {
+    "id": "gomawo",
+    "ko": "고마워",
+    "zh": "謝謝（親）",
+    "roman": "gomawo",
+    "category": "問候",
+    "example": "선물 고마워!",
+    "exampleZh": "謝謝禮物！",
+    "level": "入門"
+  },
+  {
+    "id": "mianhaeyo",
+    "ko": "미안해요",
+    "zh": "對不起",
+    "roman": "mianhaeyo",
+    "category": "問候",
+    "example": "늦어서 미안해요.",
+    "exampleZh": "抱歉遲到了。",
+    "level": "入門"
+  },
+  {
+    "id": "gwaenchanayo",
+    "ko": "괜찮아요",
+    "zh": "沒關係",
+    "roman": "gwaenchanayo",
+    "category": "問候",
+    "example": "괜찮아요. 걱정 마세요.",
+    "exampleZh": "沒關係，別擔心。",
+    "level": "入門"
+  },
+  {
+    "id": "ne",
+    "ko": "네",
+    "zh": "是／好的",
+    "roman": "ne",
+    "category": "問候",
+    "example": "네, 알겠습니다.",
+    "exampleZh": "是，我知道了。",
+    "level": "入門"
+  },
+  {
+    "id": "aniyo",
+    "ko": "아니요",
+    "zh": "不是／不用",
+    "roman": "aniyo",
+    "category": "問候",
+    "example": "아니요, 괜찮아요.",
+    "exampleZh": "不用，我沒關係。",
+    "level": "入門"
+  },
+  {
+    "id": "jamsimanyo",
+    "ko": "잠시만요",
+    "zh": "請稍等",
+    "roman": "jamsimanyo",
+    "category": "問候",
+    "example": "잠시만요. 곧 올게요.",
+    "exampleZh": "請稍等，我馬上回來。",
+    "level": "入門"
+  },
+  {
+    "id": "sillyehamnida",
+    "ko": "실례합니다",
+    "zh": "不好意思（打擾）",
+    "roman": "sillyehamnida",
+    "category": "問候",
+    "example": "실례합니다. 길이 어디예요?",
+    "exampleZh": "不好意思，路怎麼走？",
+    "level": "入門"
+  },
+  {
+    "id": "mannaseo-bangawoyo",
+    "ko": "만나서 반가워요",
+    "zh": "很高興認識你",
+    "roman": "mannaseo bangawoyo",
+    "category": "問候",
+    "example": "처음 뵙겠습니다. 만나서 반가워요.",
+    "exampleZh": "初次見面，很高興認識你。",
+    "level": "入門"
+  },
+  {
+    "id": "jal-ga",
+    "ko": "잘 가",
+    "zh": "再見（去的人）",
+    "roman": "jal ga",
+    "category": "問候",
+    "example": "조심히 가. 잘 가!",
+    "exampleZh": "小心上路，再見！",
+    "level": "入門"
+  },
+  {
+    "id": "jal-ja",
+    "ko": "잘 자",
+    "zh": "晚安",
+    "roman": "jal ja",
+    "category": "問候",
+    "example": "오늘 피곤하지? 잘 자.",
+    "exampleZh": "今天累了吧？晚安。",
+    "level": "入門"
+  },
+  {
+    "id": "hwanyeonghamnida",
+    "ko": "환영합니다",
+    "zh": "歡迎",
+    "roman": "hwanyeonghamnida",
+    "category": "問候",
+    "example": "한국에 오신 것을 환영합니다.",
+    "exampleZh": "歡迎來到韓國。",
+    "level": "入門"
+  },
+  {
+    "id": "doum",
+    "ko": "도움",
+    "zh": "幫助",
+    "roman": "doum",
+    "category": "問候",
+    "example": "도움이 필요해요.",
+    "exampleZh": "我需要幫助。",
+    "level": "入門"
+  },
+  {
+    "id": "na",
+    "ko": "나",
+    "zh": "我（隨和）",
+    "roman": "na",
+    "category": "人物",
+    "example": "나는 학생이에요.",
+    "exampleZh": "我是學生。",
+    "level": "入門"
+  },
+  {
+    "id": "jeo",
+    "ko": "저",
+    "zh": "我（禮貌）",
+    "roman": "jeo",
+    "category": "人物",
+    "example": "저는 대만 사람이에요.",
+    "exampleZh": "我是台灣人。",
+    "level": "入門"
+  },
+  {
+    "id": "neo",
+    "ko": "너",
+    "zh": "你（親）",
+    "roman": "neo",
+    "category": "人物",
+    "example": "너는 이름이 뭐야?",
+    "exampleZh": "你叫什麼名字？",
+    "level": "入門"
+  },
+  {
+    "id": "dangsin",
+    "ko": "당신",
+    "zh": "您／你",
+    "roman": "dangsin",
+    "category": "人物",
+    "example": "당신 이름은 뭐예요?",
+    "exampleZh": "您叫什麼名字？",
+    "level": "入門"
+  },
+  {
+    "id": "uri",
+    "ko": "우리",
+    "zh": "我們",
+    "roman": "uri",
+    "category": "人物",
+    "example": "우리는 친구예요.",
+    "exampleZh": "我們是朋友。",
+    "level": "入門"
+  },
+  {
+    "id": "geu",
+    "ko": "그",
+    "zh": "他／那個",
+    "roman": "geu",
+    "category": "人物",
+    "example": "그는 선생님이에요.",
+    "exampleZh": "他是老師。",
+    "level": "入門"
+  },
+  {
+    "id": "geunyeo",
+    "ko": "그녀",
+    "zh": "她",
+    "roman": "geunyeo",
+    "category": "人物",
+    "example": "그녀는 가수예요.",
+    "exampleZh": "她是歌手。",
+    "level": "入門"
+  },
+  {
+    "id": "saram",
+    "ko": "사람",
+    "zh": "人",
+    "roman": "saram",
+    "category": "人物",
+    "example": "좋은 사람을 만났어요.",
+    "exampleZh": "我遇見了好人。",
+    "level": "入門"
+  },
+  {
+    "id": "chingu",
+    "ko": "친구",
+    "zh": "朋友",
+    "roman": "chingu",
+    "category": "人物",
+    "example": "내 친구는 친절해요.",
+    "exampleZh": "我的朋友很親切。",
+    "level": "入門"
+  },
+  {
+    "id": "seonsaengnim",
+    "ko": "선생님",
+    "zh": "老師",
+    "roman": "seonsaengnim",
+    "category": "人物",
+    "example": "선생님, 질문 있어요.",
+    "exampleZh": "老師，我有問題。",
+    "level": "入門"
+  },
+  {
+    "id": "haksaeng",
+    "ko": "학생",
+    "zh": "學生",
+    "roman": "haksaeng",
+    "category": "人物",
+    "example": "저는 한국어 학생이에요.",
+    "exampleZh": "我是韓文學生。",
+    "level": "入門"
+  },
+  {
+    "id": "ireum",
+    "ko": "이름",
+    "zh": "名字",
+    "roman": "ireum",
+    "category": "人物",
+    "example": "제 이름은 민지예요.",
+    "exampleZh": "我的名字是民芝。",
+    "level": "入門"
+  },
+  {
+    "id": "ajeossi",
+    "ko": "아저씨",
+    "zh": "叔叔／大叔",
+    "roman": "ajeossi",
+    "category": "人物",
+    "example": "아저씨가 길을 알려 주셨어요.",
+    "exampleZh": "大叔幫我指路了。",
+    "level": "入門"
+  },
+  {
+    "id": "ajumeoni",
+    "ko": "아주머니",
+    "zh": "阿姨",
+    "roman": "ajumeoni",
+    "category": "人物",
+    "example": "아주머니, 이거 얼마예요?",
+    "exampleZh": "阿姨，這個多少錢？",
+    "level": "入門"
+  },
+  {
+    "id": "ai",
+    "ko": "아이",
+    "zh": "小孩",
+    "roman": "ai",
+    "category": "人物",
+    "example": "아이가 웃고 있어요.",
+    "exampleZh": "小孩在笑。",
+    "level": "入門"
+  },
+  {
+    "id": "gajok",
+    "ko": "가족",
+    "zh": "家人",
+    "roman": "gajok",
+    "category": "家庭",
+    "example": "주말에 가족을 만나요.",
+    "exampleZh": "週末見家人。",
+    "level": "入門"
+  },
+  {
+    "id": "abeoji",
+    "ko": "아버지",
+    "zh": "父親",
+    "roman": "abeoji",
+    "category": "家庭",
+    "example": "아버지는 회사에 다녀요.",
+    "exampleZh": "爸爸去公司上班。",
+    "level": "入門"
+  },
+  {
+    "id": "eomeoni",
+    "ko": "어머니",
+    "zh": "母親",
+    "roman": "eomeoni",
+    "category": "家庭",
+    "example": "어머니는 요리를 잘해요.",
+    "exampleZh": "媽媽很會煮飯。",
+    "level": "入門"
+  },
+  {
+    "id": "bumonim",
+    "ko": "부모님",
+    "zh": "父母",
+    "roman": "bumonim",
+    "category": "家庭",
+    "example": "부모님께 전화했어요.",
+    "exampleZh": "我打電話給父母了。",
+    "level": "入門"
+  },
+  {
+    "id": "hyeong",
+    "ko": "형",
+    "zh": "哥哥（男稱）",
+    "roman": "hyeong",
+    "category": "家庭",
+    "example": "형은 축구를 좋아해요.",
+    "exampleZh": "哥哥喜歡足球。",
+    "level": "入門"
+  },
+  {
+    "id": "oppa",
+    "ko": "오빠",
+    "zh": "哥哥（女稱）",
+    "roman": "oppa",
+    "category": "家庭",
+    "example": "오빠가 선물을 줬어요.",
+    "exampleZh": "哥哥送了禮物。",
+    "level": "入門"
+  },
+  {
+    "id": "nuna",
+    "ko": "누나",
+    "zh": "姊姊（男稱）",
+    "roman": "nuna",
+    "category": "家庭",
+    "example": "누나는 대학생이에요.",
+    "exampleZh": "姊姊是大學生。",
+    "level": "入門"
+  },
+  {
+    "id": "eonni",
+    "ko": "언니",
+    "zh": "姊姊（女稱）",
+    "roman": "eonni",
+    "category": "家庭",
+    "example": "언니는 서울에 살아요.",
+    "exampleZh": "姊姊住在首爾。",
+    "level": "入門"
+  },
+  {
+    "id": "dongsaeng",
+    "ko": "동생",
+    "zh": "弟／妹",
+    "roman": "dongsaeng",
+    "category": "家庭",
+    "example": "동생이 귀여워요.",
+    "exampleZh": "弟弟／妹妹很可愛。",
+    "level": "入門"
+  },
+  {
+    "id": "adeul",
+    "ko": "아들",
+    "zh": "兒子",
+    "roman": "adeul",
+    "category": "家庭",
+    "example": "아들이 학교에 가요.",
+    "exampleZh": "兒子去學校。",
+    "level": "入門"
+  },
+  {
+    "id": "ttal",
+    "ko": "딸",
+    "zh": "女兒",
+    "roman": "ttal",
+    "category": "家庭",
+    "example": "딸이 피아노를 쳐요.",
+    "exampleZh": "女兒彈鋼琴。",
+    "level": "入門"
+  },
+  {
+    "id": "nampyeon",
+    "ko": "남편",
+    "zh": "丈夫",
+    "roman": "nampyeon",
+    "category": "家庭",
+    "example": "남편과 쇼핑해요.",
+    "exampleZh": "和丈夫一起購物。",
+    "level": "入門"
+  },
+  {
+    "id": "anae",
+    "ko": "아내",
+    "zh": "妻子",
+    "roman": "anae",
+    "category": "家庭",
+    "example": "아내는 의사예요.",
+    "exampleZh": "妻子是醫生。",
+    "level": "入門"
+  },
+  {
+    "id": "jip",
+    "ko": "집",
+    "zh": "家／房子",
+    "roman": "jip",
+    "category": "家庭",
+    "example": "우리 집은 작아요.",
+    "exampleZh": "我們家很小。",
+    "level": "入門"
+  },
+  {
+    "id": "goyangi",
+    "ko": "고양이",
+    "zh": "貓",
+    "roman": "goyangi",
+    "category": "家庭",
+    "example": "고양이가 잠을 자요.",
+    "exampleZh": "貓在睡覺。",
+    "level": "入門"
+  },
+  {
+    "id": "gae",
+    "ko": "개",
+    "zh": "狗",
+    "roman": "gae",
+    "category": "家庭",
+    "example": "개가 공원에서 뛰어요.",
+    "exampleZh": "狗在公園跑。",
+    "level": "入門"
+  },
+  {
+    "id": "bap",
+    "ko": "밥",
+    "zh": "飯／餐",
+    "roman": "bap",
+    "category": "飲食",
+    "example": "밥 먹었어요?",
+    "exampleZh": "吃飯了嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "mul",
+    "ko": "물",
+    "zh": "水",
+    "roman": "mul",
+    "category": "飲食",
+    "example": "물 한 잔 주세요.",
+    "exampleZh": "請給我一杯水。",
+    "level": "入門"
+  },
+  {
+    "id": "keopi",
+    "ko": "커피",
+    "zh": "咖啡",
+    "roman": "keopi",
+    "category": "飲食",
+    "example": "커피를 마시고 싶어요.",
+    "exampleZh": "我想喝咖啡。",
+    "level": "入門"
+  },
+  {
+    "id": "cha",
+    "ko": "차",
+    "zh": "茶",
+    "roman": "cha",
+    "category": "飲食",
+    "example": "녹차 드릴까요?",
+    "exampleZh": "要給您綠茶嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "uyu",
+    "ko": "우유",
+    "zh": "牛奶",
+    "roman": "uyu",
+    "category": "飲食",
+    "example": "아침에 우유를 마셔요.",
+    "exampleZh": "早上喝牛奶。",
+    "level": "入門"
+  },
+  {
+    "id": "juseu",
+    "ko": "주스",
+    "zh": "果汁",
+    "roman": "juseu",
+    "category": "飲食",
+    "example": "오렌지 주스 주세요.",
+    "exampleZh": "請給我柳橙汁。",
+    "level": "入門"
+  },
+  {
+    "id": "ppang",
+    "ko": "빵",
+    "zh": "麵包",
+    "roman": "ppang",
+    "category": "飲食",
+    "example": "빵과 잼을 먹어요.",
+    "exampleZh": "吃麵包和果醬。",
+    "level": "入門"
+  },
+  {
+    "id": "gwail",
+    "ko": "과일",
+    "zh": "水果",
+    "roman": "gwail",
+    "category": "飲食",
+    "example": "과일을 많이 먹어요.",
+    "exampleZh": "我吃很多水果。",
+    "level": "入門"
+  },
+  {
+    "id": "sagwa",
+    "ko": "사과",
+    "zh": "蘋果",
+    "roman": "sagwa",
+    "category": "飲食",
+    "example": "사과가 달아요.",
+    "exampleZh": "蘋果很甜。",
+    "level": "入門"
+  },
+  {
+    "id": "banana",
+    "ko": "바나나",
+    "zh": "香蕉",
+    "roman": "banana",
+    "category": "飲食",
+    "example": "바나나 하나 주세요.",
+    "exampleZh": "請給我一根香蕉。",
+    "level": "入門"
+  },
+  {
+    "id": "gogi",
+    "ko": "고기",
+    "zh": "肉",
+    "roman": "gogi",
+    "category": "飲食",
+    "example": "고기를 안 먹어요.",
+    "exampleZh": "我不吃肉。",
+    "level": "入門"
+  },
+  {
+    "id": "saengseon",
+    "ko": "생선",
+    "zh": "魚",
+    "roman": "saengseon",
+    "category": "飲食",
+    "example": "생선구이가 맛있어요.",
+    "exampleZh": "烤魚很好吃。",
+    "level": "入門"
+  },
+  {
+    "id": "gimchi",
+    "ko": "김치",
+    "zh": "泡菜",
+    "roman": "gimchi",
+    "category": "飲食",
+    "example": "한국 사람은 김치를 좋아해요.",
+    "exampleZh": "韓國人喜歡泡菜。",
+    "level": "入門"
+  },
+  {
+    "id": "bibimbap",
+    "ko": "비빔밥",
+    "zh": "拌飯",
+    "roman": "bibimbap",
+    "category": "飲食",
+    "example": "비빔밥 하나 주세요.",
+    "exampleZh": "請給我一份拌飯。",
+    "level": "入門"
+  },
+  {
+    "id": "ramyeon",
+    "ko": "라면",
+    "zh": "拉麵",
+    "roman": "ramyeon",
+    "category": "飲食",
+    "example": "밤에 라면을 끓였어요.",
+    "exampleZh": "晚上煮了拉麵。",
+    "level": "入門"
+  },
+  {
+    "id": "chikin",
+    "ko": "치킨",
+    "zh": "炸雞",
+    "roman": "chikin",
+    "category": "飲食",
+    "example": "치킨이랑 맥주 어때요?",
+    "exampleZh": "炸雞配啤酒怎麼樣？",
+    "level": "入門"
+  },
+  {
+    "id": "maekju",
+    "ko": "맥주",
+    "zh": "啤酒",
+    "roman": "maekju",
+    "category": "飲食",
+    "example": "맥주 한 잔 할래요?",
+    "exampleZh": "要不要來杯啤酒？",
+    "level": "入門"
+  },
+  {
+    "id": "masisseoyo",
+    "ko": "맛있어요",
+    "zh": "好吃",
+    "roman": "masisseoyo",
+    "category": "飲食",
+    "example": "이 음식 정말 맛있어요!",
+    "exampleZh": "這食物真好吃！",
+    "level": "入門"
+  },
+  {
+    "id": "baegopayo",
+    "ko": "배고파요",
+    "zh": "肚子餓",
+    "roman": "baegopayo",
+    "category": "飲食",
+    "example": "점심 전에 배고파요.",
+    "exampleZh": "午餐前肚子餓。",
+    "level": "入門"
+  },
+  {
+    "id": "baebulleoyo",
+    "ko": "배불러요",
+    "zh": "吃飽了",
+    "roman": "baebulleoyo",
+    "category": "飲食",
+    "example": "너무 많이 먹어서 배불러요.",
+    "exampleZh": "吃太多，飽了。",
+    "level": "入門"
+  },
+  {
+    "id": "juseyo",
+    "ko": "주세요",
+    "zh": "請給我",
+    "roman": "juseyo",
+    "category": "咖啡館",
+    "example": "아이스 아메리카노 주세요.",
+    "exampleZh": "請給我冰美式。",
+    "level": "入門"
+  },
+  {
+    "id": "aiseu",
+    "ko": "아이스",
+    "zh": "冰的",
+    "roman": "aiseu",
+    "category": "咖啡館",
+    "example": "아이스로 해 주세요.",
+    "exampleZh": "請做成冰的。",
+    "level": "入門"
+  },
+  {
+    "id": "ttatteuthan",
+    "ko": "따뜻한",
+    "zh": "熱的",
+    "roman": "ttatteuthan",
+    "category": "咖啡館",
+    "example": "따뜻한 라떼 주세요.",
+    "exampleZh": "請給我熱拿鐵。",
+    "level": "入門"
+  },
+  {
+    "id": "amerikano",
+    "ko": "아메리카노",
+    "zh": "美式咖啡",
+    "roman": "amerikano",
+    "category": "咖啡館",
+    "example": "아메리카노가 제일 좋아요.",
+    "exampleZh": "我最愛美式。",
+    "level": "入門"
+  },
+  {
+    "id": "latte",
+    "ko": "라떼",
+    "zh": "拿鐵",
+    "roman": "latte",
+    "category": "咖啡館",
+    "example": "바닐라 라떼 있나요?",
+    "exampleZh": "有香草拿鐵嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "keikeu",
+    "ko": "케이크",
+    "zh": "蛋糕",
+    "roman": "keikeu",
+    "category": "咖啡館",
+    "example": "치즈 케이크 하나 더 주세요.",
+    "exampleZh": "再給我一塊起司蛋糕。",
+    "level": "入門"
+  },
+  {
+    "id": "menyu",
+    "ko": "메뉴",
+    "zh": "菜單",
+    "roman": "menyu",
+    "category": "咖啡館",
+    "example": "메뉴 좀 볼 수 있어요?",
+    "exampleZh": "可以看一下菜單嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "gyesan",
+    "ko": "계산",
+    "zh": "結帳",
+    "roman": "gyesan",
+    "category": "咖啡館",
+    "example": "계산해 주세요.",
+    "exampleZh": "請結帳。",
+    "level": "入門"
+  },
+  {
+    "id": "kadeu",
+    "ko": "카드",
+    "zh": "卡片／信用卡",
+    "roman": "kadeu",
+    "category": "咖啡館",
+    "example": "카드로 결제할게요.",
+    "exampleZh": "我用卡付。",
+    "level": "入門"
+  },
+  {
+    "id": "hyeongeum",
+    "ko": "현금",
+    "zh": "現金",
+    "roman": "hyeongeum",
+    "category": "咖啡館",
+    "example": "현금으로 내도 돼요?",
+    "exampleZh": "可以用現金嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "jari",
+    "ko": "자리",
+    "zh": "位子",
+    "roman": "jari",
+    "category": "咖啡館",
+    "example": "창가 자리 있어요?",
+    "exampleZh": "有靠窗位子嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "pojang",
+    "ko": "포장",
+    "zh": "外帶",
+    "roman": "pojang",
+    "category": "咖啡館",
+    "example": "포장해 주세요.",
+    "exampleZh": "請幫我外帶。",
+    "level": "入門"
+  },
+  {
+    "id": "yeogiseo",
+    "ko": "여기서",
+    "zh": "在這裡",
+    "roman": "yeogiseo",
+    "category": "咖啡館",
+    "example": "여기서 먹을게요.",
+    "exampleZh": "我在這裡吃。",
+    "level": "入門"
+  },
+  {
+    "id": "waipai",
+    "ko": "와이파이",
+    "zh": "Wi‑Fi",
+    "roman": "waipai",
+    "category": "咖啡館",
+    "example": "와이파이 비밀번호가 뭐예요?",
+    "exampleZh": "Wi‑Fi 密碼是什麼？",
+    "level": "入門"
+  },
+  {
+    "id": "konsenteu",
+    "ko": "콘센트",
+    "zh": "插座",
+    "roman": "konsenteu",
+    "category": "咖啡館",
+    "example": "콘센트 있는 자리로 주세요.",
+    "exampleZh": "請給我有插座的位子。",
+    "level": "入門"
+  },
+  {
+    "id": "eolmayeyo",
+    "ko": "얼마예요",
+    "zh": "多少錢？",
+    "roman": "eolmayeyo",
+    "category": "購物",
+    "example": "이거 얼마예요?",
+    "exampleZh": "這個多少錢？",
+    "level": "入門"
+  },
+  {
+    "id": "sada",
+    "ko": "사다",
+    "zh": "買",
+    "roman": "sada",
+    "category": "購物",
+    "example": "선물을 사고 싶어요.",
+    "exampleZh": "我想買禮物。",
+    "level": "入門"
+  },
+  {
+    "id": "palda",
+    "ko": "팔다",
+    "zh": "賣",
+    "roman": "palda",
+    "category": "購物",
+    "example": "이 가게는 책을 팔아요.",
+    "exampleZh": "這家店賣書。",
+    "level": "入門"
+  },
+  {
+    "id": "gage",
+    "ko": "가게",
+    "zh": "店",
+    "roman": "gage",
+    "category": "購物",
+    "example": "길에 예쁜 가게가 많아요.",
+    "exampleZh": "街上有很多漂亮的店。",
+    "level": "入門"
+  },
+  {
+    "id": "sijang",
+    "ko": "시장",
+    "zh": "市場",
+    "roman": "sijang",
+    "category": "購物",
+    "example": "주말마다 시장에 가요.",
+    "exampleZh": "每週末去市場。",
+    "level": "入門"
+  },
+  {
+    "id": "baekhwajeom",
+    "ko": "백화점",
+    "zh": "百貨公司",
+    "roman": "baekhwajeom",
+    "category": "購物",
+    "example": "백화점에서 옷을 샀어요.",
+    "exampleZh": "在百貨公司買了衣服。",
+    "level": "入門"
+  },
+  {
+    "id": "ot",
+    "ko": "옷",
+    "zh": "衣服",
+    "roman": "ot",
+    "category": "購物",
+    "example": "새 옷을 입었어요.",
+    "exampleZh": "穿了新衣服。",
+    "level": "入門"
+  },
+  {
+    "id": "sinbal",
+    "ko": "신발",
+    "zh": "鞋子",
+    "roman": "sinbal",
+    "category": "購物",
+    "example": "신발이 편해요.",
+    "exampleZh": "鞋子很舒服。",
+    "level": "入門"
+  },
+  {
+    "id": "gabang",
+    "ko": "가방",
+    "zh": "包包",
+    "roman": "gabang",
+    "category": "購物",
+    "example": "가방이 무거워요.",
+    "exampleZh": "包包很重。",
+    "level": "入門"
+  },
+  {
+    "id": "moja",
+    "ko": "모자",
+    "zh": "帽子",
+    "roman": "moja",
+    "category": "購物",
+    "example": "모자를 썼어요.",
+    "exampleZh": "戴了帽子。",
+    "level": "入門"
+  },
+  {
+    "id": "ssada",
+    "ko": "싸다",
+    "zh": "便宜",
+    "roman": "ssada",
+    "category": "購物",
+    "example": "이 티셔츠는 싸요.",
+    "exampleZh": "這件 T 恤很便宜。",
+    "level": "入門"
+  },
+  {
+    "id": "bissada",
+    "ko": "비싸다",
+    "zh": "貴",
+    "roman": "bissada",
+    "category": "購物",
+    "example": "조금 비싸요.",
+    "exampleZh": "有點貴。",
+    "level": "入門"
+  },
+  {
+    "id": "harin",
+    "ko": "할인",
+    "zh": "折扣",
+    "roman": "harin",
+    "category": "購物",
+    "example": "할인해요?",
+    "exampleZh": "有打折嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "saijeu",
+    "ko": "사이즈",
+    "zh": "尺寸",
+    "roman": "saijeu",
+    "category": "購物",
+    "example": "사이즈가 있어요?",
+    "exampleZh": "有這個尺寸嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "saekkkal",
+    "ko": "색깔",
+    "zh": "顏色",
+    "roman": "saekkkal",
+    "category": "購物",
+    "example": "다른 색깔 있어요?",
+    "exampleZh": "有其他顏色嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "yeongsujeung",
+    "ko": "영수증",
+    "zh": "收據",
+    "roman": "yeongsujeung",
+    "category": "購物",
+    "example": "영수증 주세요.",
+    "exampleZh": "請給我收據。",
+    "level": "入門"
+  },
+  {
+    "id": "hwanbul",
+    "ko": "환불",
+    "zh": "退款",
+    "roman": "hwanbul",
+    "category": "購物",
+    "example": "환불할 수 있어요?",
+    "exampleZh": "可以退款嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "yeppeuda",
+    "ko": "예쁘다",
+    "zh": "漂亮",
+    "roman": "yeppeuda",
+    "category": "購物",
+    "example": "이 가방 정말 예뻐요.",
+    "exampleZh": "這個包包真漂亮。",
+    "level": "入門"
+  },
+  {
+    "id": "oneul",
+    "ko": "오늘",
+    "zh": "今天",
+    "roman": "oneul",
+    "category": "時間",
+    "example": "오늘 날씨가 좋아요.",
+    "exampleZh": "今天天氣很好。",
+    "level": "入門"
+  },
+  {
+    "id": "eoje",
+    "ko": "어제",
+    "zh": "昨天",
+    "roman": "eoje",
+    "category": "時間",
+    "example": "어제 영화를 봤어요.",
+    "exampleZh": "昨天看了電影。",
+    "level": "入門"
+  },
+  {
+    "id": "naeil",
+    "ko": "내일",
+    "zh": "明天",
+    "roman": "naeil",
+    "category": "時間",
+    "example": "내일 만나요.",
+    "exampleZh": "明天見。",
+    "level": "入門"
+  },
+  {
+    "id": "jigeum",
+    "ko": "지금",
+    "zh": "現在",
+    "roman": "jigeum",
+    "category": "時間",
+    "example": "지금 뭐 해요?",
+    "exampleZh": "現在在做什麼？",
+    "level": "入門"
+  },
+  {
+    "id": "najunge",
+    "ko": "나중에",
+    "zh": "待會／以後",
+    "roman": "najunge",
+    "category": "時間",
+    "example": "나중에 연락할게요.",
+    "exampleZh": "待會再聯絡。",
+    "level": "入門"
+  },
+  {
+    "id": "achim",
+    "ko": "아침",
+    "zh": "早上",
+    "roman": "achim",
+    "category": "時間",
+    "example": "아침에 운동해요.",
+    "exampleZh": "早上運動。",
+    "level": "入門"
+  },
+  {
+    "id": "jeomsim",
+    "ko": "점심",
+    "zh": "中午／午餐",
+    "roman": "jeomsim",
+    "category": "時間",
+    "example": "점심 같이 먹을래요?",
+    "exampleZh": "要一起吃午餐嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "jeonyeok",
+    "ko": "저녁",
+    "zh": "晚上／晚餐",
+    "roman": "jeonyeok",
+    "category": "時間",
+    "example": "저녁에 전화해요.",
+    "exampleZh": "晚上打電話。",
+    "level": "入門"
+  },
+  {
+    "id": "bam",
+    "ko": "밤",
+    "zh": "夜晚",
+    "roman": "bam",
+    "category": "時間",
+    "example": "밤에 별을 봐요.",
+    "exampleZh": "晚上看星星。",
+    "level": "入門"
+  },
+  {
+    "id": "jumal",
+    "ko": "주말",
+    "zh": "週末",
+    "roman": "jumal",
+    "category": "時間",
+    "example": "주말에 쉬어요.",
+    "exampleZh": "週末休息。",
+    "level": "入門"
+  },
+  {
+    "id": "woryoil",
+    "ko": "월요일",
+    "zh": "星期一",
+    "roman": "woryoil",
+    "category": "時間",
+    "example": "월요일은 바빠요.",
+    "exampleZh": "星期一很忙。",
+    "level": "入門"
+  },
+  {
+    "id": "geumyoil",
+    "ko": "금요일",
+    "zh": "星期五",
+    "roman": "geumyoil",
+    "category": "時間",
+    "example": "금요일 저녁에 만나요.",
+    "exampleZh": "星期五晚上見。",
+    "level": "入門"
+  },
+  {
+    "id": "sigan",
+    "ko": "시간",
+    "zh": "時間",
+    "roman": "sigan",
+    "category": "時間",
+    "example": "시간이 없어요.",
+    "exampleZh": "沒有時間。",
+    "level": "入門"
+  },
+  {
+    "id": "bun",
+    "ko": "분",
+    "zh": "分鐘",
+    "roman": "bun",
+    "category": "時間",
+    "example": "오 분만 기다려 주세요.",
+    "exampleZh": "請等五分鐘。",
+    "level": "入門"
+  },
+  {
+    "id": "si",
+    "ko": "시",
+    "zh": "點鐘",
+    "roman": "si",
+    "category": "時間",
+    "example": "세 시에 만나요.",
+    "exampleZh": "三點見。",
+    "level": "入門"
+  },
+  {
+    "id": "eonje",
+    "ko": "언제",
+    "zh": "什麼時候",
+    "roman": "eonje",
+    "category": "時間",
+    "example": "언제 한국에 가요?",
+    "exampleZh": "什麼時候去韓國？",
+    "level": "入門"
+  },
+  {
+    "id": "maeil",
+    "ko": "매일",
+    "zh": "每天",
+    "roman": "maeil",
+    "category": "時間",
+    "example": "매일 한국어를 공부해요.",
+    "exampleZh": "每天學韓文。",
+    "level": "入門"
+  },
+  {
+    "id": "nyeon",
+    "ko": "년",
+    "zh": "年",
+    "roman": "nyeon",
+    "category": "時間",
+    "example": "내년에 여행할 거예요.",
+    "exampleZh": "明年要旅行。",
+    "level": "入門"
+  },
+  {
+    "id": "dal",
+    "ko": "달",
+    "zh": "月",
+    "roman": "dal",
+    "category": "時間",
+    "example": "한 달 동안 공부했어요.",
+    "exampleZh": "學了一個月。",
+    "level": "入門"
+  },
+  {
+    "id": "ju",
+    "ko": "주",
+    "zh": "週",
+    "roman": "ju",
+    "category": "時間",
+    "example": "이번 주에 시험이 있어요.",
+    "exampleZh": "這週有考試。",
+    "level": "入門"
+  },
+  {
+    "id": "eodi",
+    "ko": "어디",
+    "zh": "哪裡",
+    "roman": "eodi",
+    "category": "地方",
+    "example": "화장실이 어디예요?",
+    "exampleZh": "洗手間在哪裡？",
+    "level": "入門"
+  },
+  {
+    "id": "yeogi",
+    "ko": "여기",
+    "zh": "這裡",
+    "roman": "yeogi",
+    "category": "地方",
+    "example": "여기가 좋아요.",
+    "exampleZh": "這裡不錯。",
+    "level": "入門"
+  },
+  {
+    "id": "geogi",
+    "ko": "거기",
+    "zh": "那裡",
+    "roman": "geogi",
+    "category": "地方",
+    "example": "거기에 앉으세요.",
+    "exampleZh": "請坐那裡。",
+    "level": "入門"
+  },
+  {
+    "id": "hakgyo",
+    "ko": "학교",
+    "zh": "學校",
+    "roman": "hakgyo",
+    "category": "地方",
+    "example": "학교에 걸어가요.",
+    "exampleZh": "走路去學校。",
+    "level": "入門"
+  },
+  {
+    "id": "hoesa",
+    "ko": "회사",
+    "zh": "公司",
+    "roman": "hoesa",
+    "category": "地方",
+    "example": "회사에서 일해요.",
+    "exampleZh": "在公司工作。",
+    "level": "入門"
+  },
+  {
+    "id": "byeongwon",
+    "ko": "병원",
+    "zh": "醫院",
+    "roman": "byeongwon",
+    "category": "地方",
+    "example": "병원에 가야 해요.",
+    "exampleZh": "必須去醫院。",
+    "level": "入門"
+  },
+  {
+    "id": "eunhaeng",
+    "ko": "은행",
+    "zh": "銀行",
+    "roman": "eunhaeng",
+    "category": "地方",
+    "example": "은행이 가까워요.",
+    "exampleZh": "銀行很近。",
+    "level": "入門"
+  },
+  {
+    "id": "yeok",
+    "ko": "역",
+    "zh": "車站",
+    "roman": "yeok",
+    "category": "地方",
+    "example": "다음 역에서 내려요.",
+    "exampleZh": "下一站下車。",
+    "level": "入門"
+  },
+  {
+    "id": "gonghang",
+    "ko": "공항",
+    "zh": "機場",
+    "roman": "gonghang",
+    "category": "地方",
+    "example": "공항으로 가는 버스요.",
+    "exampleZh": "去機場的公車。",
+    "level": "入門"
+  },
+  {
+    "id": "hotel",
+    "ko": "호텔",
+    "zh": "飯店",
+    "roman": "hotel",
+    "category": "地方",
+    "example": "호텔을 예약했어요.",
+    "exampleZh": "訂了飯店。",
+    "level": "入門"
+  },
+  {
+    "id": "gongwon",
+    "ko": "공원",
+    "zh": "公園",
+    "roman": "gongwon",
+    "category": "地方",
+    "example": "공원에서 산책해요.",
+    "exampleZh": "在公園散步。",
+    "level": "入門"
+  },
+  {
+    "id": "bada",
+    "ko": "바다",
+    "zh": "海",
+    "roman": "bada",
+    "category": "地方",
+    "example": "바다를 보고 싶어요.",
+    "exampleZh": "想看海。",
+    "level": "入門"
+  },
+  {
+    "id": "san",
+    "ko": "산",
+    "zh": "山",
+    "roman": "san",
+    "category": "地方",
+    "example": "산에 올라갔어요.",
+    "exampleZh": "爬了山。",
+    "level": "入門"
+  },
+  {
+    "id": "dosi",
+    "ko": "도시",
+    "zh": "城市",
+    "roman": "dosi",
+    "category": "地方",
+    "example": "이 도시는 예뻐요.",
+    "exampleZh": "這座城市很美。",
+    "level": "入門"
+  },
+  {
+    "id": "nara",
+    "ko": "나라",
+    "zh": "國家",
+    "roman": "nara",
+    "category": "地方",
+    "example": "어느 나라에서 왔어요?",
+    "exampleZh": "你從哪個國家來？",
+    "level": "入門"
+  },
+  {
+    "id": "hanguk",
+    "ko": "한국",
+    "zh": "韓國",
+    "roman": "hanguk",
+    "category": "地方",
+    "example": "한국 음식을 좋아해요.",
+    "exampleZh": "我喜歡韓國食物。",
+    "level": "入門"
+  },
+  {
+    "id": "daeman",
+    "ko": "대만",
+    "zh": "台灣",
+    "roman": "daeman",
+    "category": "地方",
+    "example": "대만은 망고가 유명해요.",
+    "exampleZh": "台灣芒果很有名。",
+    "level": "入門"
+  },
+  {
+    "id": "seoul",
+    "ko": "서울",
+    "zh": "首爾",
+    "roman": "seoul",
+    "category": "地方",
+    "example": "서울에 살고 싶어요.",
+    "exampleZh": "想住在首爾。",
+    "level": "入門"
+  },
+  {
+    "id": "hwajangsil",
+    "ko": "화장실",
+    "zh": "洗手間",
+    "roman": "hwajangsil",
+    "category": "地方",
+    "example": "화장실 좀 빌려도 돼요?",
+    "exampleZh": "可以借用洗手間嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "oenjjok",
+    "ko": "왼쪽",
+    "zh": "左邊",
+    "roman": "oenjjok",
+    "category": "地方",
+    "example": "왼쪽으로 가세요.",
+    "exampleZh": "請往左走。",
+    "level": "入門"
+  },
+  {
+    "id": "oreunjjok",
+    "ko": "오른쪽",
+    "zh": "右邊",
+    "roman": "oreunjjok",
+    "category": "地方",
+    "example": "오른쪽에서 만나요.",
+    "exampleZh": "在右邊見。",
+    "level": "入門"
+  },
+  {
+    "id": "gada",
+    "ko": "가다",
+    "zh": "去",
+    "roman": "gada",
+    "category": "動詞",
+    "example": "학교에 가요.",
+    "exampleZh": "去學校。",
+    "level": "入門"
+  },
+  {
+    "id": "oda",
+    "ko": "오다",
+    "zh": "來",
+    "roman": "oda",
+    "category": "動詞",
+    "example": "내일 올까요?",
+    "exampleZh": "明天要來嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "hada",
+    "ko": "하다",
+    "zh": "做",
+    "roman": "hada",
+    "category": "動詞",
+    "example": "숙제를 해요.",
+    "exampleZh": "做作業。",
+    "level": "入門"
+  },
+  {
+    "id": "meokda",
+    "ko": "먹다",
+    "zh": "吃",
+    "roman": "meokda",
+    "category": "動詞",
+    "example": "밥을 먹어요.",
+    "exampleZh": "吃飯。",
+    "level": "入門"
+  },
+  {
+    "id": "masida",
+    "ko": "마시다",
+    "zh": "喝",
+    "roman": "masida",
+    "category": "動詞",
+    "example": "물을 마셔요.",
+    "exampleZh": "喝水。",
+    "level": "入門"
+  },
+  {
+    "id": "boda",
+    "ko": "보다",
+    "zh": "看",
+    "roman": "boda",
+    "category": "動詞",
+    "example": "영화를 봐요.",
+    "exampleZh": "看電影。",
+    "level": "入門"
+  },
+  {
+    "id": "deutda",
+    "ko": "듣다",
+    "zh": "聽",
+    "roman": "deutda",
+    "category": "動詞",
+    "example": "음악을 들어요.",
+    "exampleZh": "聽音樂。",
+    "level": "入門"
+  },
+  {
+    "id": "malhada",
+    "ko": "말하다",
+    "zh": "說",
+    "roman": "malhada",
+    "category": "動詞",
+    "example": "천천히 말해 주세요.",
+    "exampleZh": "請慢慢說。",
+    "level": "入門"
+  },
+  {
+    "id": "ikda",
+    "ko": "읽다",
+    "zh": "讀",
+    "roman": "ikda",
+    "category": "動詞",
+    "example": "책을 읽어요.",
+    "exampleZh": "讀書。",
+    "level": "入門"
+  },
+  {
+    "id": "sseuda",
+    "ko": "쓰다",
+    "zh": "寫／戴／用",
+    "roman": "sseuda",
+    "category": "動詞",
+    "example": "이름을 쓰세요.",
+    "exampleZh": "請寫名字。",
+    "level": "入門"
+  },
+  {
+    "id": "jada",
+    "ko": "자다",
+    "zh": "睡",
+    "roman": "jada",
+    "category": "動詞",
+    "example": "일찍 자고 싶어요.",
+    "exampleZh": "想早睡。",
+    "level": "入門"
+  },
+  {
+    "id": "ireonada",
+    "ko": "일어나다",
+    "zh": "起床",
+    "roman": "ireonada",
+    "category": "動詞",
+    "example": "일곱 시에 일어나요.",
+    "exampleZh": "七點起床。",
+    "level": "入門"
+  },
+  {
+    "id": "mannada",
+    "ko": "만나다",
+    "zh": "見面",
+    "roman": "mannada",
+    "category": "動詞",
+    "example": "친구를 만나요.",
+    "exampleZh": "見朋友。",
+    "level": "入門"
+  },
+  {
+    "id": "joahada",
+    "ko": "좋아하다",
+    "zh": "喜歡",
+    "roman": "joahada",
+    "category": "動詞",
+    "example": "음악을 좋아해요.",
+    "exampleZh": "喜歡音樂。",
+    "level": "入門"
+  },
+  {
+    "id": "saranghada",
+    "ko": "사랑하다",
+    "zh": "愛",
+    "roman": "saranghada",
+    "category": "動詞",
+    "example": "가족을 사랑해요.",
+    "exampleZh": "愛家人。",
+    "level": "入門"
+  },
+  {
+    "id": "gongbuhada",
+    "ko": "공부하다",
+    "zh": "學習",
+    "roman": "gongbuhada",
+    "category": "動詞",
+    "example": "한국어를 공부해요.",
+    "exampleZh": "學韓文。",
+    "level": "入門"
+  },
+  {
+    "id": "ilhada",
+    "ko": "일하다",
+    "zh": "工作",
+    "roman": "ilhada",
+    "category": "動詞",
+    "example": "카페에서 일해요.",
+    "exampleZh": "在咖啡廳工作。",
+    "level": "入門"
+  },
+  {
+    "id": "yeohaenghada",
+    "ko": "여행하다",
+    "zh": "旅行",
+    "roman": "yeohaenghada",
+    "category": "動詞",
+    "example": "여름에 여행해요.",
+    "exampleZh": "夏天旅行。",
+    "level": "入門"
+  },
+  {
+    "id": "swida",
+    "ko": "쉬다",
+    "zh": "休息",
+    "roman": "swida",
+    "category": "動詞",
+    "example": "조금 쉬어요.",
+    "exampleZh": "休息一下。",
+    "level": "入門"
+  },
+  {
+    "id": "geotda",
+    "ko": "걷다",
+    "zh": "走",
+    "roman": "geotda",
+    "category": "動詞",
+    "example": "공원을 걸어요.",
+    "exampleZh": "在公園走。",
+    "level": "入門"
+  },
+  {
+    "id": "dallida",
+    "ko": "달리다",
+    "zh": "跑",
+    "roman": "dallida",
+    "category": "動詞",
+    "example": "아침에 달려요.",
+    "exampleZh": "早上跑步。",
+    "level": "入門"
+  },
+  {
+    "id": "yorihada",
+    "ko": "요리하다",
+    "zh": "煮飯",
+    "roman": "yorihada",
+    "category": "動詞",
+    "example": "저녁을 요리해요.",
+    "exampleZh": "煮晚餐。",
+    "level": "入門"
+  },
+  {
+    "id": "cheongsohada",
+    "ko": "청소하다",
+    "zh": "打掃",
+    "roman": "cheongsohada",
+    "category": "動詞",
+    "example": "방을 청소해요.",
+    "exampleZh": "打掃房間。",
+    "level": "入門"
+  },
+  {
+    "id": "jeonhwahada",
+    "ko": "전화하다",
+    "zh": "打電話",
+    "roman": "jeonhwahada",
+    "category": "動詞",
+    "example": "어머니께 전화해요.",
+    "exampleZh": "打電話給媽媽。",
+    "level": "入門"
+  },
+  {
+    "id": "gidarida",
+    "ko": "기다리다",
+    "zh": "等待",
+    "roman": "gidarida",
+    "category": "動詞",
+    "example": "잠깐만 기다려 주세요.",
+    "exampleZh": "請稍等一下。",
+    "level": "入門"
+  },
+  {
+    "id": "alda",
+    "ko": "알다",
+    "zh": "知道",
+    "roman": "alda",
+    "category": "動詞",
+    "example": "그 길을 알아요.",
+    "exampleZh": "我知道那條路。",
+    "level": "入門"
+  },
+  {
+    "id": "moreuda",
+    "ko": "모르다",
+    "zh": "不知道",
+    "roman": "moreuda",
+    "category": "動詞",
+    "example": "잘 모르겠어요.",
+    "exampleZh": "我不太清楚。",
+    "level": "入門"
+  },
+  {
+    "id": "dowajuda",
+    "ko": "도와주다",
+    "zh": "幫忙",
+    "roman": "dowajuda",
+    "category": "動詞",
+    "example": "좀 도와주세요.",
+    "exampleZh": "請幫我一下。",
+    "level": "入門"
+  },
+  {
+    "id": "gareuchida",
+    "ko": "가르치다",
+    "zh": "教",
+    "roman": "gareuchida",
+    "category": "動詞",
+    "example": "한국어를 가르쳐 주세요.",
+    "exampleZh": "請教我韓文。",
+    "level": "入門"
+  },
+  {
+    "id": "jota",
+    "ko": "좋다",
+    "zh": "好",
+    "roman": "jota",
+    "category": "形容詞",
+    "example": "오늘 기분이 좋아요.",
+    "exampleZh": "今天心情很好。",
+    "level": "入門"
+  },
+  {
+    "id": "nappeuda",
+    "ko": "나쁘다",
+    "zh": "壞",
+    "roman": "nappeuda",
+    "category": "形容詞",
+    "example": "날씨가 나빠요.",
+    "exampleZh": "天氣不好。",
+    "level": "入門"
+  },
+  {
+    "id": "keuda",
+    "ko": "크다",
+    "zh": "大",
+    "roman": "keuda",
+    "category": "形容詞",
+    "example": "집이 커요.",
+    "exampleZh": "房子很大。",
+    "level": "入門"
+  },
+  {
+    "id": "jakda",
+    "ko": "작다",
+    "zh": "小",
+    "roman": "jakda",
+    "category": "形容詞",
+    "example": "가방이 작아요.",
+    "exampleZh": "包包很小。",
+    "level": "入門"
+  },
+  {
+    "id": "manta",
+    "ko": "많다",
+    "zh": "多",
+    "roman": "manta",
+    "category": "形容詞",
+    "example": "사람이 많아요.",
+    "exampleZh": "人很多。",
+    "level": "入門"
+  },
+  {
+    "id": "jeokda",
+    "ko": "적다",
+    "zh": "少",
+    "roman": "jeokda",
+    "category": "形容詞",
+    "example": "시간이 적어요.",
+    "exampleZh": "時間很少。",
+    "level": "入門"
+  },
+  {
+    "id": "ppareuda",
+    "ko": "빠르다",
+    "zh": "快",
+    "roman": "ppareuda",
+    "category": "形容詞",
+    "example": "기차가 빨라요.",
+    "exampleZh": "火車很快。",
+    "level": "入門"
+  },
+  {
+    "id": "neurida",
+    "ko": "느리다",
+    "zh": "慢",
+    "roman": "neurida",
+    "category": "形容詞",
+    "example": "버스가 느려요.",
+    "exampleZh": "公車很慢。",
+    "level": "入門"
+  },
+  {
+    "id": "deopda",
+    "ko": "덥다",
+    "zh": "熱",
+    "roman": "deopda",
+    "category": "形容詞",
+    "example": "오늘 정말 더워요.",
+    "exampleZh": "今天真的很熱。",
+    "level": "入門"
+  },
+  {
+    "id": "chupda",
+    "ko": "춥다",
+    "zh": "冷",
+    "roman": "chupda",
+    "category": "形容詞",
+    "example": "겨울에 추워요.",
+    "exampleZh": "冬天很冷。",
+    "level": "入門"
+  },
+  {
+    "id": "jaemiitda",
+    "ko": "재미있다",
+    "zh": "有趣",
+    "roman": "jaemiitda",
+    "category": "形容詞",
+    "example": "이 드라마 재미있어요.",
+    "exampleZh": "這部劇很好看。",
+    "level": "入門"
+  },
+  {
+    "id": "eoryeopda",
+    "ko": "어렵다",
+    "zh": "難",
+    "roman": "eoryeopda",
+    "category": "形容詞",
+    "example": "한국어가 어려워요.",
+    "exampleZh": "韓文很難。",
+    "level": "入門"
+  },
+  {
+    "id": "swipda",
+    "ko": "쉽다",
+    "zh": "簡單",
+    "roman": "swipda",
+    "category": "形容詞",
+    "example": "이 문제는 쉬워요.",
+    "exampleZh": "這題很簡單。",
+    "level": "入門"
+  },
+  {
+    "id": "bappeuda",
+    "ko": "바쁘다",
+    "zh": "忙",
+    "roman": "bappeuda",
+    "category": "形容詞",
+    "example": "요즘 너무 바빠요.",
+    "exampleZh": "最近太忙了。",
+    "level": "入門"
+  },
+  {
+    "id": "pigonhada",
+    "ko": "피곤하다",
+    "zh": "累",
+    "roman": "pigonhada",
+    "category": "形容詞",
+    "example": "일이 많아서 피곤해요.",
+    "exampleZh": "工作多所以很累。",
+    "level": "入門"
+  },
+  {
+    "id": "haengbokhada",
+    "ko": "행복하다",
+    "zh": "幸福",
+    "roman": "haengbokhada",
+    "category": "形容詞",
+    "example": "가족과 있으면 행복해요.",
+    "exampleZh": "和家人在一起就幸福。",
+    "level": "入門"
+  },
+  {
+    "id": "seulpeuda",
+    "ko": "슬프다",
+    "zh": "傷心",
+    "roman": "seulpeuda",
+    "category": "形容詞",
+    "example": "영화가 슬펐어요.",
+    "exampleZh": "電影很傷心。",
+    "level": "入門"
+  },
+  {
+    "id": "museopda",
+    "ko": "무섭다",
+    "zh": "可怕",
+    "roman": "museopda",
+    "category": "形容詞",
+    "example": "그 소리가 무서워요.",
+    "exampleZh": "那聲音好可怕。",
+    "level": "入門"
+  },
+  {
+    "id": "gakkapda",
+    "ko": "가깝다",
+    "zh": "近",
+    "roman": "gakkapda",
+    "category": "形容詞",
+    "example": "역이 가까워요.",
+    "exampleZh": "車站很近。",
+    "level": "入門"
+  },
+  {
+    "id": "meolda",
+    "ko": "멀다",
+    "zh": "遠",
+    "roman": "meolda",
+    "category": "形容詞",
+    "example": "집이 멀어요.",
+    "exampleZh": "家很遠。",
+    "level": "入門"
+  },
+  {
+    "id": "kkaekkeuthada",
+    "ko": "깨끗하다",
+    "zh": "乾淨",
+    "roman": "kkaekkeuthada",
+    "category": "形容詞",
+    "example": "방이 깨끗해요.",
+    "exampleZh": "房間很乾淨。",
+    "level": "入門"
+  },
+  {
+    "id": "deoreopda",
+    "ko": "더럽다",
+    "zh": "髒",
+    "roman": "deoreopda",
+    "category": "形容詞",
+    "example": "신발이 더러워요.",
+    "exampleZh": "鞋子很髒。",
+    "level": "入門"
+  },
+  {
+    "id": "saeropda",
+    "ko": "새롭다",
+    "zh": "新",
+    "roman": "saeropda",
+    "category": "形容詞",
+    "example": "새 책을 샀어요.",
+    "exampleZh": "買了新書。",
+    "level": "入門"
+  },
+  {
+    "id": "oraedoeda",
+    "ko": "오래되다",
+    "zh": "舊",
+    "roman": "oraedoeda",
+    "category": "形容詞",
+    "example": "오래된 집이에요.",
+    "exampleZh": "是一棟老房子。",
+    "level": "入門"
+  },
+  {
+    "id": "hana",
+    "ko": "하나",
+    "zh": "一",
+    "roman": "hana",
+    "category": "數字",
+    "example": "하나 주세요.",
+    "exampleZh": "請給我一個。",
+    "level": "入門"
+  },
+  {
+    "id": "dul",
+    "ko": "둘",
+    "zh": "二",
+    "roman": "dul",
+    "category": "數字",
+    "example": "사과 둘 있어요.",
+    "exampleZh": "有兩個蘋果。",
+    "level": "入門"
+  },
+  {
+    "id": "set",
+    "ko": "셋",
+    "zh": "三",
+    "roman": "set",
+    "category": "數字",
+    "example": "친구가 셋 있어요.",
+    "exampleZh": "有三個朋友。",
+    "level": "入門"
+  },
+  {
+    "id": "net",
+    "ko": "넷",
+    "zh": "四",
+    "roman": "net",
+    "category": "數字",
+    "example": "책이 넷이에요.",
+    "exampleZh": "書有四本。",
+    "level": "入門"
+  },
+  {
+    "id": "daseot",
+    "ko": "다섯",
+    "zh": "五",
+    "roman": "daseot",
+    "category": "數字",
+    "example": "다섯 시에 만나요.",
+    "exampleZh": "五點見。",
+    "level": "入門"
+  },
+  {
+    "id": "yeoseot",
+    "ko": "여섯",
+    "zh": "六",
+    "roman": "yeoseot",
+    "category": "數字",
+    "example": "여섯 명이 왔어요.",
+    "exampleZh": "來了六個人。",
+    "level": "入門"
+  },
+  {
+    "id": "ilgop",
+    "ko": "일곱",
+    "zh": "七",
+    "roman": "ilgop",
+    "category": "數字",
+    "example": "일곱 살이에요.",
+    "exampleZh": "七歲。",
+    "level": "入門"
+  },
+  {
+    "id": "yeodeol",
+    "ko": "여덟",
+    "zh": "八",
+    "roman": "yeodeol",
+    "category": "數字",
+    "example": "여덟 번 반복해요.",
+    "exampleZh": "重複八次。",
+    "level": "入門"
+  },
+  {
+    "id": "ahop",
+    "ko": "아홉",
+    "zh": "九",
+    "roman": "ahop",
+    "category": "數字",
+    "example": "아홉 시예요.",
+    "exampleZh": "九點了。",
+    "level": "入門"
+  },
+  {
+    "id": "yeol",
+    "ko": "열",
+    "zh": "十",
+    "roman": "yeol",
+    "category": "數字",
+    "example": "열 개 필요해요.",
+    "exampleZh": "需要十個。",
+    "level": "入門"
+  },
+  {
+    "id": "baek",
+    "ko": "백",
+    "zh": "百",
+    "roman": "baek",
+    "category": "數字",
+    "example": "백 원이에요.",
+    "exampleZh": "一百韓元。",
+    "level": "入門"
+  },
+  {
+    "id": "cheon",
+    "ko": "천",
+    "zh": "千",
+    "roman": "cheon",
+    "category": "數字",
+    "example": "천 원만 있어요.",
+    "exampleZh": "只有一千韓元。",
+    "level": "入門"
+  },
+  {
+    "id": "man",
+    "ko": "만",
+    "zh": "萬",
+    "roman": "man",
+    "category": "數字",
+    "example": "만 원 주세요.",
+    "exampleZh": "請給我一萬韓元。",
+    "level": "入門"
+  },
+  {
+    "id": "eolma",
+    "ko": "얼마",
+    "zh": "多少",
+    "roman": "eolma",
+    "category": "數字",
+    "example": "얼마예요?",
+    "exampleZh": "多少錢？",
+    "level": "入門"
+  },
+  {
+    "id": "cheot",
+    "ko": "첫",
+    "zh": "第一",
+    "roman": "cheot",
+    "category": "數字",
+    "example": "첫 수업이에요.",
+    "exampleZh": "是第一堂課。",
+    "level": "入門"
+  },
+  {
+    "id": "beoseu",
+    "ko": "버스",
+    "zh": "公車",
+    "roman": "beoseu",
+    "category": "交通",
+    "example": "버스를 타요.",
+    "exampleZh": "搭公車。",
+    "level": "入門"
+  },
+  {
+    "id": "jihacheol",
+    "ko": "지하철",
+    "zh": "地鐵",
+    "roman": "jihacheol",
+    "category": "交通",
+    "example": "지하철이 편해요.",
+    "exampleZh": "地鐵很方便。",
+    "level": "入門"
+  },
+  {
+    "id": "taeksi",
+    "ko": "택시",
+    "zh": "計程車",
+    "roman": "taeksi",
+    "category": "交通",
+    "example": "택시를 불러요.",
+    "exampleZh": "叫計程車。",
+    "level": "入門"
+  },
+  {
+    "id": "gicha",
+    "ko": "기차",
+    "zh": "火車",
+    "roman": "gicha",
+    "category": "交通",
+    "example": "기차를 놓쳤어요.",
+    "exampleZh": "誤了火車。",
+    "level": "入門"
+  },
+  {
+    "id": "bihaenggi",
+    "ko": "비행기",
+    "zh": "飛機",
+    "roman": "bihaenggi",
+    "category": "交通",
+    "example": "비행기를 타요.",
+    "exampleZh": "搭飛機。",
+    "level": "入門"
+  },
+  {
+    "id": "tada",
+    "ko": "타다",
+    "zh": "搭乘",
+    "roman": "tada",
+    "category": "交通",
+    "example": "버스를 타세요.",
+    "exampleZh": "請搭公車。",
+    "level": "入門"
+  },
+  {
+    "id": "naerida",
+    "ko": "내리다",
+    "zh": "下車",
+    "roman": "naerida",
+    "category": "交通",
+    "example": "여기서 내려요.",
+    "exampleZh": "在這裡下車。",
+    "level": "入門"
+  },
+  {
+    "id": "pyo",
+    "ko": "표",
+    "zh": "票",
+    "roman": "pyo",
+    "category": "交通",
+    "example": "표를 샀어요.",
+    "exampleZh": "買了票。",
+    "level": "入門"
+  },
+  {
+    "id": "garatada",
+    "ko": "갈아타다",
+    "zh": "轉乘",
+    "roman": "garatada",
+    "category": "交通",
+    "example": "시청에서 갈아타요.",
+    "exampleZh": "在市廳轉乘。",
+    "level": "入門"
+  },
+  {
+    "id": "gil",
+    "ko": "길",
+    "zh": "路",
+    "roman": "gil",
+    "category": "交通",
+    "example": "이 길로 가세요.",
+    "exampleZh": "請走這條路。",
+    "level": "入門"
+  },
+  {
+    "id": "makhida",
+    "ko": "막히다",
+    "zh": "塞車",
+    "roman": "makhida",
+    "category": "交通",
+    "example": "길이 막혀요.",
+    "exampleZh": "路塞了。",
+    "level": "入門"
+  },
+  {
+    "id": "unjeonhada",
+    "ko": "운전하다",
+    "zh": "開車",
+    "roman": "unjeonhada",
+    "category": "交通",
+    "example": "가끔 운전해요.",
+    "exampleZh": "偶爾開車。",
+    "level": "入門"
+  },
+  {
+    "id": "dochak",
+    "ko": "도착",
+    "zh": "到達",
+    "roman": "dochak",
+    "category": "交通",
+    "example": "공항에 도착했어요.",
+    "exampleZh": "抵達機場了。",
+    "level": "入門"
+  },
+  {
+    "id": "nalssi",
+    "ko": "날씨",
+    "zh": "天氣",
+    "roman": "nalssi",
+    "category": "天氣",
+    "example": "오늘 날씨 어때요?",
+    "exampleZh": "今天天氣怎麼樣？",
+    "level": "入門"
+  },
+  {
+    "id": "bi",
+    "ko": "비",
+    "zh": "雨",
+    "roman": "bi",
+    "category": "天氣",
+    "example": "비가 와요.",
+    "exampleZh": "下雨了。",
+    "level": "入門"
+  },
+  {
+    "id": "nun",
+    "ko": "눈",
+    "zh": "雪／眼睛",
+    "roman": "nun",
+    "category": "天氣",
+    "example": "눈이 와요.",
+    "exampleZh": "下雪了。",
+    "level": "入門"
+  },
+  {
+    "id": "hae",
+    "ko": "해",
+    "zh": "太陽",
+    "roman": "hae",
+    "category": "天氣",
+    "example": "해가 밝아요.",
+    "exampleZh": "太陽很亮。",
+    "level": "入門"
+  },
+  {
+    "id": "baram",
+    "ko": "바람",
+    "zh": "風",
+    "roman": "baram",
+    "category": "天氣",
+    "example": "바람이 불어요.",
+    "exampleZh": "風在吹。",
+    "level": "入門"
+  },
+  {
+    "id": "gureum",
+    "ko": "구름",
+    "zh": "雲",
+    "roman": "gureum",
+    "category": "天氣",
+    "example": "구름이 많아요.",
+    "exampleZh": "雲很多。",
+    "level": "入門"
+  },
+  {
+    "id": "makda",
+    "ko": "맑다",
+    "zh": "晴朗",
+    "roman": "makda",
+    "category": "天氣",
+    "example": "하늘이 맑아요.",
+    "exampleZh": "天空很晴朗。",
+    "level": "入門"
+  },
+  {
+    "id": "heurida",
+    "ko": "흐리다",
+    "zh": "陰",
+    "roman": "heurida",
+    "category": "天氣",
+    "example": "날이 흐려요.",
+    "exampleZh": "天氣陰陰的。",
+    "level": "入門"
+  },
+  {
+    "id": "siwonhada",
+    "ko": "시원하다",
+    "zh": "涼爽",
+    "roman": "siwonhada",
+    "category": "天氣",
+    "example": "바람이 시원해요.",
+    "exampleZh": "風很涼爽。",
+    "level": "入門"
+  },
+  {
+    "id": "ttatteuthada",
+    "ko": "따뜻하다",
+    "zh": "溫暖",
+    "roman": "ttatteuthada",
+    "category": "天氣",
+    "example": "봄이 따뜻해요.",
+    "exampleZh": "春天很溫暖。",
+    "level": "入門"
+  },
+  {
+    "id": "usan",
+    "ko": "우산",
+    "zh": "雨傘",
+    "roman": "usan",
+    "category": "天氣",
+    "example": "우산을 가져가세요.",
+    "exampleZh": "請帶雨傘。",
+    "level": "入門"
+  },
+  {
+    "id": "gyejeol",
+    "ko": "계절",
+    "zh": "季節",
+    "roman": "gyejeol",
+    "category": "天氣",
+    "example": "좋아하는 계절이 뭐예요?",
+    "exampleZh": "你喜歡哪個季節？",
+    "level": "入門"
+  },
+  {
+    "id": "bom",
+    "ko": "봄",
+    "zh": "春天",
+    "roman": "bom",
+    "category": "天氣",
+    "example": "봄에 꽃이 펴요.",
+    "exampleZh": "春天開花。",
+    "level": "入門"
+  },
+  {
+    "id": "joayo",
+    "ko": "좋아요",
+    "zh": "喜歡／很好",
+    "roman": "joayo",
+    "category": "感覺",
+    "example": "이 노래 좋아요.",
+    "exampleZh": "這首歌很好。",
+    "level": "入門"
+  },
+  {
+    "id": "sireoyo",
+    "ko": "싫어요",
+    "zh": "不喜歡",
+    "roman": "sireoyo",
+    "category": "感覺",
+    "example": "매운 건 싫어요.",
+    "exampleZh": "我不喜歡辣的。",
+    "level": "入門"
+  },
+  {
+    "id": "haengbokhaeyo",
+    "ko": "행복해요",
+    "zh": "我很幸福",
+    "roman": "haengbokhaeyo",
+    "category": "感覺",
+    "example": "지금 행복해요.",
+    "exampleZh": "現在很幸福。",
+    "level": "入門"
+  },
+  {
+    "id": "gippeoyo",
+    "ko": "기뻐요",
+    "zh": "開心",
+    "roman": "gippeoyo",
+    "category": "感覺",
+    "example": "선물을 받아서 기뻐요.",
+    "exampleZh": "收到禮物好開心。",
+    "level": "入門"
+  },
+  {
+    "id": "seulpeoyo",
+    "ko": "슬퍼요",
+    "zh": "難過",
+    "roman": "seulpeoyo",
+    "category": "感覺",
+    "example": "헤어져서 슬퍼요.",
+    "exampleZh": "分開了好難過。",
+    "level": "入門"
+  },
+  {
+    "id": "museowoyo",
+    "ko": "무서워요",
+    "zh": "害怕",
+    "roman": "museowoyo",
+    "category": "感覺",
+    "example": "어두워서 무서워요.",
+    "exampleZh": "太暗好害怕。",
+    "level": "入門"
+  },
+  {
+    "id": "pigonhaeyo",
+    "ko": "피곤해요",
+    "zh": "好累",
+    "roman": "pigonhaeyo",
+    "category": "感覺",
+    "example": "오늘 너무 피곤해요.",
+    "exampleZh": "今天好累。",
+    "level": "入門"
+  },
+  {
+    "id": "apayo",
+    "ko": "아파요",
+    "zh": "疼痛／不舒服",
+    "roman": "apayo",
+    "category": "感覺",
+    "example": "머리가 아파요.",
+    "exampleZh": "頭痛。",
+    "level": "入門"
+  },
+  {
+    "id": "bogo-sipeoyo",
+    "ko": "보고 싶어요",
+    "zh": "想念",
+    "roman": "bogo sipeoyo",
+    "category": "感覺",
+    "example": "가족이 보고 싶어요.",
+    "exampleZh": "想念家人。",
+    "level": "入門"
+  },
+  {
+    "id": "saranghaeyo",
+    "ko": "사랑해요",
+    "zh": "我愛你／愛",
+    "roman": "saranghaeyo",
+    "category": "感覺",
+    "example": "정말 사랑해요.",
+    "exampleZh": "真的很愛你。",
+    "level": "入門"
+  },
+  {
+    "id": "gomawoyo",
+    "ko": "고마워요",
+    "zh": "謝謝",
+    "roman": "gomawoyo",
+    "category": "感覺",
+    "example": "항상 고마워요.",
+    "exampleZh": "一直都很謝謝你。",
+    "level": "入門"
+  },
+  {
+    "id": "jeulgeowoyo",
+    "ko": "즐거워요",
+    "zh": "愉快",
+    "roman": "jeulgeowoyo",
+    "category": "感覺",
+    "example": "여행이 즐거워요.",
+    "exampleZh": "旅行很愉快。",
+    "level": "入門"
+  },
+  {
+    "id": "simsimhaeyo",
+    "ko": "심심해요",
+    "zh": "無聊",
+    "roman": "simsimhaeyo",
+    "category": "感覺",
+    "example": "집에서 심심해요.",
+    "exampleZh": "在家好無聊。",
+    "level": "入門"
+  },
+  {
+    "id": "sueop",
+    "ko": "수업",
+    "zh": "課",
+    "roman": "sueop",
+    "category": "學校",
+    "example": "수업이 끝났어요.",
+    "exampleZh": "下課了。",
+    "level": "入門"
+  },
+  {
+    "id": "sukje",
+    "ko": "숙제",
+    "zh": "作業",
+    "roman": "sukje",
+    "category": "學校",
+    "example": "숙제를 했어요.",
+    "exampleZh": "作業做完了。",
+    "level": "入門"
+  },
+  {
+    "id": "siheom",
+    "ko": "시험",
+    "zh": "考試",
+    "roman": "siheom",
+    "category": "學校",
+    "example": "이번 주 시험이 있어요.",
+    "exampleZh": "這週有考試。",
+    "level": "入門"
+  },
+  {
+    "id": "chaek",
+    "ko": "책",
+    "zh": "書",
+    "roman": "chaek",
+    "category": "學校",
+    "example": "이 책을 읽어요.",
+    "exampleZh": "讀這本書。",
+    "level": "入門"
+  },
+  {
+    "id": "gongchaek",
+    "ko": "공책",
+    "zh": "筆記本",
+    "roman": "gongchaek",
+    "category": "學校",
+    "example": "공책에 쓰세요.",
+    "exampleZh": "請寫在筆記本上。",
+    "level": "入門"
+  },
+  {
+    "id": "pen",
+    "ko": "펜",
+    "zh": "筆",
+    "roman": "pen",
+    "category": "學校",
+    "example": "펜 좀 빌려도 돼요?",
+    "exampleZh": "可以借筆嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "gyosil",
+    "ko": "교실",
+    "zh": "教室",
+    "roman": "gyosil",
+    "category": "學校",
+    "example": "교실이 어디예요?",
+    "exampleZh": "教室在哪？",
+    "level": "入門"
+  },
+  {
+    "id": "doseogwan",
+    "ko": "도서관",
+    "zh": "圖書館",
+    "roman": "doseogwan",
+    "category": "學校",
+    "example": "도서관에서 공부해요.",
+    "exampleZh": "在圖書館讀書。",
+    "level": "入門"
+  },
+  {
+    "id": "jilmun",
+    "ko": "질문",
+    "zh": "問題",
+    "roman": "jilmun",
+    "category": "學校",
+    "example": "질문 있어요.",
+    "exampleZh": "我有問題。",
+    "level": "入門"
+  },
+  {
+    "id": "daedap",
+    "ko": "대답",
+    "zh": "回答",
+    "roman": "daedap",
+    "category": "學校",
+    "example": "대답해 주세요.",
+    "exampleZh": "請回答。",
+    "level": "入門"
+  },
+  {
+    "id": "baeuda",
+    "ko": "배우다",
+    "zh": "學習",
+    "roman": "baeuda",
+    "category": "學校",
+    "example": "노래를 배워요.",
+    "exampleZh": "學唱歌。",
+    "level": "入門"
+  },
+  {
+    "id": "yeonseuphada",
+    "ko": "연습하다",
+    "zh": "練習",
+    "roman": "yeonseuphada",
+    "category": "學校",
+    "example": "발음을 연습해요.",
+    "exampleZh": "練習發音。",
+    "level": "入門"
+  },
+  {
+    "id": "gieokhada",
+    "ko": "기억하다",
+    "zh": "記得",
+    "roman": "gieokhada",
+    "category": "學校",
+    "example": "이름을 기억해요.",
+    "exampleZh": "記得名字。",
+    "level": "入門"
+  },
+  {
+    "id": "ijeobeorida",
+    "ko": "잊어버리다",
+    "zh": "忘記",
+    "roman": "ijeobeorida",
+    "category": "學校",
+    "example": "비밀번호를 잊어버렸어요.",
+    "exampleZh": "忘記密碼了。",
+    "level": "入門"
+  },
+  {
+    "id": "ihaehada",
+    "ko": "이해하다",
+    "zh": "理解",
+    "roman": "ihaehada",
+    "category": "學校",
+    "example": "이제 이해해요.",
+    "exampleZh": "現在懂了。",
+    "level": "入門"
+  },
+  {
+    "id": "ida",
+    "ko": "이다",
+    "zh": "是",
+    "roman": "ida",
+    "category": "日常",
+    "example": "저는 학생이에요.",
+    "exampleZh": "我是學生。",
+    "level": "入門"
+  },
+  {
+    "id": "itda",
+    "ko": "있다",
+    "zh": "有／在",
+    "roman": "itda",
+    "category": "日常",
+    "example": "시간이 있어요.",
+    "exampleZh": "有時間。",
+    "level": "入門"
+  },
+  {
+    "id": "eopda",
+    "ko": "없다",
+    "zh": "沒有",
+    "roman": "eopda",
+    "category": "日常",
+    "example": "돈이 없어요.",
+    "exampleZh": "沒有錢。",
+    "level": "入門"
+  },
+  {
+    "id": "igeot",
+    "ko": "이것",
+    "zh": "這個",
+    "roman": "igeot",
+    "category": "日常",
+    "example": "이것은 뭐예요?",
+    "exampleZh": "這是什麼？",
+    "level": "入門"
+  },
+  {
+    "id": "jeogeot",
+    "ko": "저것",
+    "zh": "那個",
+    "roman": "jeogeot",
+    "category": "日常",
+    "example": "저것을 주세요.",
+    "exampleZh": "請給我那個。",
+    "level": "入門"
+  },
+  {
+    "id": "mueot",
+    "ko": "무엇",
+    "zh": "什麼",
+    "roman": "mueot",
+    "category": "日常",
+    "example": "무엇을 좋아해요?",
+    "exampleZh": "你喜歡什麼？",
+    "level": "入門"
+  },
+  {
+    "id": "nugu",
+    "ko": "누구",
+    "zh": "誰",
+    "roman": "nugu",
+    "category": "日常",
+    "example": "누구세요?",
+    "exampleZh": "是誰？",
+    "level": "入門"
+  },
+  {
+    "id": "wae",
+    "ko": "왜",
+    "zh": "為什麼",
+    "roman": "wae",
+    "category": "日常",
+    "example": "왜 울어요?",
+    "exampleZh": "為什麼哭？",
+    "level": "入門"
+  },
+  {
+    "id": "eotteoke",
+    "ko": "어떻게",
+    "zh": "怎麼樣",
+    "roman": "eotteoke",
+    "category": "日常",
+    "example": "어떻게 가요?",
+    "exampleZh": "怎麼去？",
+    "level": "入門"
+  },
+  {
+    "id": "jeongmal",
+    "ko": "정말",
+    "zh": "真的",
+    "roman": "jeongmal",
+    "category": "日常",
+    "example": "정말 고마워요.",
+    "exampleZh": "真的謝謝。",
+    "level": "入門"
+  },
+  {
+    "id": "aju",
+    "ko": "아주",
+    "zh": "非常",
+    "roman": "aju",
+    "category": "日常",
+    "example": "아주 맛있어요.",
+    "exampleZh": "非常好吃。",
+    "level": "入門"
+  },
+  {
+    "id": "jogeum",
+    "ko": "조금",
+    "zh": "一點",
+    "roman": "jogeum",
+    "category": "日常",
+    "example": "조금만 주세요.",
+    "exampleZh": "請給一點點。",
+    "level": "入門"
+  },
+  {
+    "id": "modu",
+    "ko": "모두",
+    "zh": "全部",
+    "roman": "modu",
+    "category": "日常",
+    "example": "모두 왔어요.",
+    "exampleZh": "全部都來了。",
+    "level": "入門"
+  },
+  {
+    "id": "gachi",
+    "ko": "같이",
+    "zh": "一起",
+    "roman": "gachi",
+    "category": "日常",
+    "example": "같이 가요.",
+    "exampleZh": "一起去。",
+    "level": "入門"
+  },
+  {
+    "id": "honja",
+    "ko": "혼자",
+    "zh": "一個人",
+    "roman": "honja",
+    "category": "日常",
+    "example": "혼자 살아요.",
+    "exampleZh": "一個人住。",
+    "level": "入門"
+  },
+  {
+    "id": "tto",
+    "ko": "또",
+    "zh": "又／再",
+    "roman": "tto",
+    "category": "日常",
+    "example": "또 만나요.",
+    "exampleZh": "再見（再見面）。",
+    "level": "入門"
+  },
+  {
+    "id": "geurigo",
+    "ko": "그리고",
+    "zh": "而且／然後",
+    "roman": "geurigo",
+    "category": "日常",
+    "example": "먹고, 그리고 가요.",
+    "exampleZh": "吃完然後走。",
+    "level": "入門"
+  },
+  {
+    "id": "hajiman",
+    "ko": "하지만",
+    "zh": "但是",
+    "roman": "hajiman",
+    "category": "日常",
+    "example": "비싸지만 사요.",
+    "exampleZh": "雖然貴但還是買。",
+    "level": "入門"
+  },
+  {
+    "id": "geuraeseo",
+    "ko": "그래서",
+    "zh": "所以",
+    "roman": "geuraeseo",
+    "category": "日常",
+    "example": "피곤해서 그래서 쉬어요.",
+    "exampleZh": "累了所以休息。",
+    "level": "入門"
+  },
+  {
+    "id": "imi",
+    "ko": "이미",
+    "zh": "已經",
+    "roman": "imi",
+    "category": "日常",
+    "example": "이미 끝났어요.",
+    "exampleZh": "已經結束了。",
+    "level": "入門"
+  },
+  {
+    "id": "ajik",
+    "ko": "아직",
+    "zh": "還",
+    "roman": "ajik",
+    "category": "日常",
+    "example": "아직 안 왔어요.",
+    "exampleZh": "還沒來。",
+    "level": "入門"
+  },
+  {
+    "id": "hangsang",
+    "ko": "항상",
+    "zh": "總是",
+    "roman": "hangsang",
+    "category": "日常",
+    "example": "항상 웃어요.",
+    "exampleZh": "總是笑。",
+    "level": "入門"
+  },
+  {
+    "id": "gakkeum",
+    "ko": "가끔",
+    "zh": "偶爾",
+    "roman": "gakkeum",
+    "category": "日常",
+    "example": "가끔 영화를 봐요.",
+    "exampleZh": "偶爾看電影。",
+    "level": "入門"
+  },
+  {
+    "id": "jaju",
+    "ko": "자주",
+    "zh": "常常",
+    "roman": "jaju",
+    "category": "日常",
+    "example": "자주 연락해요.",
+    "exampleZh": "常常聯絡。",
+    "level": "入門"
+  },
+  {
+    "id": "haendeupon",
+    "ko": "핸드폰",
+    "zh": "手機",
+    "roman": "haendeupon",
+    "category": "日常",
+    "example": "핸드폰을 찾아요.",
+    "exampleZh": "在找手機。",
+    "level": "入門"
+  },
+  {
+    "id": "keompyuteo",
+    "ko": "컴퓨터",
+    "zh": "電腦",
+    "roman": "keompyuteo",
+    "category": "日常",
+    "example": "컴퓨터로 일해요.",
+    "exampleZh": "用電腦工作。",
+    "level": "入門"
+  },
+  {
+    "id": "sajin",
+    "ko": "사진",
+    "zh": "照片",
+    "roman": "sajin",
+    "category": "日常",
+    "example": "사진을 찍어요.",
+    "exampleZh": "拍照。",
+    "level": "入門"
+  },
+  {
+    "id": "yeonghwa",
+    "ko": "영화",
+    "zh": "電影",
+    "roman": "yeonghwa",
+    "category": "日常",
+    "example": "영화를 볼래요?",
+    "exampleZh": "要看電影嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "eumak",
+    "ko": "음악",
+    "zh": "音樂",
+    "roman": "eumak",
+    "category": "日常",
+    "example": "음악을 들어요.",
+    "exampleZh": "聽音樂。",
+    "level": "入門"
+  },
+  {
+    "id": "deurama",
+    "ko": "드라마",
+    "zh": "電視劇",
+    "roman": "deurama",
+    "category": "日常",
+    "example": "한국 드라마를 봐요.",
+    "exampleZh": "看韓劇。",
+    "level": "入門"
+  },
+  {
+    "id": "yeohaeng",
+    "ko": "여행",
+    "zh": "旅行",
+    "roman": "yeohaeng",
+    "category": "旅行",
+    "example": "여름에 여행을 가요.",
+    "exampleZh": "夏天去旅行。",
+    "level": "入門"
+  },
+  {
+    "id": "yeogwon",
+    "ko": "여권",
+    "zh": "護照",
+    "roman": "yeogwon",
+    "category": "旅行",
+    "example": "여권을 챙겼어요.",
+    "exampleZh": "帶了護照。",
+    "level": "入門"
+  },
+  {
+    "id": "bija",
+    "ko": "비자",
+    "zh": "簽證",
+    "roman": "bija",
+    "category": "旅行",
+    "example": "비자가 필요해요.",
+    "exampleZh": "需要簽證。",
+    "level": "入門"
+  },
+  {
+    "id": "jim",
+    "ko": "짐",
+    "zh": "行李",
+    "roman": "jim",
+    "category": "旅行",
+    "example": "짐이 무거워요.",
+    "exampleZh": "行李很重。",
+    "level": "入門"
+  },
+  {
+    "id": "jido",
+    "ko": "지도",
+    "zh": "地圖",
+    "roman": "jido",
+    "category": "旅行",
+    "example": "지도를 봐요.",
+    "exampleZh": "看地圖。",
+    "level": "入門"
+  },
+  {
+    "id": "ginyeompum",
+    "ko": "기념품",
+    "zh": "紀念品",
+    "roman": "ginyeompum",
+    "category": "旅行",
+    "example": "기념품을 샀어요.",
+    "exampleZh": "買了紀念品。",
+    "level": "入門"
+  },
+  {
+    "id": "annae",
+    "ko": "안내",
+    "zh": "導覽／引導",
+    "roman": "annae",
+    "category": "旅行",
+    "example": "안내해 주세요.",
+    "exampleZh": "請幫我導覽。",
+    "level": "入門"
+  },
+  {
+    "id": "yeyak",
+    "ko": "예약",
+    "zh": "預約",
+    "roman": "yeyak",
+    "category": "旅行",
+    "example": "식당을 예약했어요.",
+    "exampleZh": "訂了餐廳。",
+    "level": "入門"
+  },
+  {
+    "id": "chwiso",
+    "ko": "취소",
+    "zh": "取消",
+    "roman": "chwiso",
+    "category": "旅行",
+    "example": "예약을 취소했어요.",
+    "exampleZh": "取消了預約。",
+    "level": "入門"
+  },
+  {
+    "id": "gwangwang",
+    "ko": "관광",
+    "zh": "觀光",
+    "roman": "gwangwang",
+    "category": "旅行",
+    "example": "서울을 관광해요.",
+    "exampleZh": "在首爾觀光。",
+    "level": "入門"
+  },
+  {
+    "id": "bangmulgwan",
+    "ko": "박물관",
+    "zh": "博物館",
+    "roman": "bangmulgwan",
+    "category": "旅行",
+    "example": "박물관에 갔어요.",
+    "exampleZh": "去了博物館。",
+    "level": "入門"
+  },
+  {
+    "id": "gungjeon",
+    "ko": "궁전",
+    "zh": "宮殿",
+    "roman": "gungjeon",
+    "category": "旅行",
+    "example": "경복궁은 유명한 궁전이에요.",
+    "exampleZh": "景福宮是有名的宮殿。",
+    "level": "入門"
+  },
+  {
+    "id": "chukje",
+    "ko": "축제",
+    "zh": "慶典",
+    "roman": "chukje",
+    "category": "旅行",
+    "example": "축제가 열려요.",
+    "exampleZh": "有慶典舉行。",
+    "level": "入門"
+  },
+  {
+    "id": "sukso",
+    "ko": "숙소",
+    "zh": "住宿",
+    "roman": "sukso",
+    "category": "旅行",
+    "example": "숙소를 찾고 있어요.",
+    "exampleZh": "在找住宿。",
+    "level": "入門"
+  },
+  {
+    "id": "meori",
+    "ko": "머리",
+    "zh": "頭／頭髮",
+    "roman": "meori",
+    "category": "身體",
+    "example": "머리가 아파요.",
+    "exampleZh": "頭痛。",
+    "level": "入門"
+  },
+  {
+    "id": "eolgul",
+    "ko": "얼굴",
+    "zh": "臉",
+    "roman": "eolgul",
+    "category": "身體",
+    "example": "얼굴이 빨개요.",
+    "exampleZh": "臉紅了。",
+    "level": "入門"
+  },
+  {
+    "id": "ko",
+    "ko": "코",
+    "zh": "鼻子",
+    "roman": "ko",
+    "category": "身體",
+    "example": "코가 막혀요.",
+    "exampleZh": "鼻子塞了。",
+    "level": "入門"
+  },
+  {
+    "id": "ip",
+    "ko": "입",
+    "zh": "嘴巴",
+    "roman": "ip",
+    "category": "身體",
+    "example": "입을 다물어요.",
+    "exampleZh": "閉上嘴巴。",
+    "level": "入門"
+  },
+  {
+    "id": "gwi",
+    "ko": "귀",
+    "zh": "耳朵",
+    "roman": "gwi",
+    "category": "身體",
+    "example": "귀가 간지러워요.",
+    "exampleZh": "耳朵癢。",
+    "level": "入門"
+  },
+  {
+    "id": "son",
+    "ko": "손",
+    "zh": "手",
+    "roman": "son",
+    "category": "身體",
+    "example": "손을 씻어요.",
+    "exampleZh": "洗手。",
+    "level": "入門"
+  },
+  {
+    "id": "bal",
+    "ko": "발",
+    "zh": "腳",
+    "roman": "bal",
+    "category": "身體",
+    "example": "발이 아파요.",
+    "exampleZh": "腳痛。",
+    "level": "入門"
+  },
+  {
+    "id": "mom",
+    "ko": "몸",
+    "zh": "身體",
+    "roman": "mom",
+    "category": "身體",
+    "example": "몸을 조심하세요.",
+    "exampleZh": "請保重身體。",
+    "level": "入門"
+  },
+  {
+    "id": "maeum",
+    "ko": "마음",
+    "zh": "心",
+    "roman": "maeum",
+    "category": "身體",
+    "example": "마음이 따뜻해요.",
+    "exampleZh": "心很溫暖。",
+    "level": "入門"
+  },
+  {
+    "id": "apeuda",
+    "ko": "아프다",
+    "zh": "痛",
+    "roman": "apeuda",
+    "category": "身體",
+    "example": "배가 아파요.",
+    "exampleZh": "肚子痛。",
+    "level": "入門"
+  },
+  {
+    "id": "yak",
+    "ko": "약",
+    "zh": "藥",
+    "roman": "yak",
+    "category": "身體",
+    "example": "약을 먹어요.",
+    "exampleZh": "吃藥。",
+    "level": "入門"
+  },
+  {
+    "id": "uisa",
+    "ko": "의사",
+    "zh": "醫生",
+    "roman": "uisa",
+    "category": "身體",
+    "example": "의사가 친절해요.",
+    "exampleZh": "醫生很親切。",
+    "level": "入門"
+  },
+  {
+    "id": "ppalgansaek",
+    "ko": "빨간색",
+    "zh": "紅色",
+    "roman": "ppalgansaek",
+    "category": "顏色",
+    "example": "빨간색을 좋아해요.",
+    "exampleZh": "喜歡紅色。",
+    "level": "入門"
+  },
+  {
+    "id": "paransaek",
+    "ko": "파란색",
+    "zh": "藍色",
+    "roman": "paransaek",
+    "category": "顏色",
+    "example": "하늘이 파란색이에요.",
+    "exampleZh": "天空是藍色的。",
+    "level": "入門"
+  },
+  {
+    "id": "noransaek",
+    "ko": "노란색",
+    "zh": "黃色",
+    "roman": "noransaek",
+    "category": "顏色",
+    "example": "노란색 꽃이 예뻐요.",
+    "exampleZh": "黃色的花很漂亮。",
+    "level": "入門"
+  },
+  {
+    "id": "choroksaek",
+    "ko": "초록색",
+    "zh": "綠色",
+    "roman": "choroksaek",
+    "category": "顏色",
+    "example": "초록색 티셔츠요.",
+    "exampleZh": "綠色的 T 恤。",
+    "level": "入門"
+  },
+  {
+    "id": "geomeunsaek",
+    "ko": "검은색",
+    "zh": "黑色",
+    "roman": "geomeunsaek",
+    "category": "顏色",
+    "example": "검은색 신발을 신어요.",
+    "exampleZh": "穿黑色鞋子。",
+    "level": "入門"
+  },
+  {
+    "id": "hayansaek",
+    "ko": "하얀색",
+    "zh": "白色",
+    "roman": "hayansaek",
+    "category": "顏色",
+    "example": "하얀색 셔츠예요.",
+    "exampleZh": "是白色襯衫。",
+    "level": "入門"
+  },
+  {
+    "id": "bunhongsaek",
+    "ko": "분홍색",
+    "zh": "粉紅色",
+    "roman": "bunhongsaek",
+    "category": "顏色",
+    "example": "분홍색이 귀여워요.",
+    "exampleZh": "粉紅色很可愛。",
+    "level": "入門"
+  },
+  {
+    "id": "hoesaek",
+    "ko": "회색",
+    "zh": "灰色",
+    "roman": "hoesaek",
+    "category": "顏色",
+    "example": "하늘이 회색이에요.",
+    "exampleZh": "天空是灰色的。",
+    "level": "入門"
+  },
+  {
+    "id": "balda",
+    "ko": "밝다",
+    "zh": "亮",
+    "roman": "balda",
+    "category": "顏色",
+    "example": "방이 밝아요.",
+    "exampleZh": "房間很亮。",
+    "level": "入門"
+  },
+  {
+    "id": "eodupda",
+    "ko": "어둡다",
+    "zh": "暗",
+    "roman": "eodupda",
+    "category": "顏色",
+    "example": "밤이 어두워요.",
+    "exampleZh": "夜晚很暗。",
+    "level": "入門"
+  },
+  {
+    "id": "il",
+    "ko": "일",
+    "zh": "工作／事",
+    "roman": "il",
+    "category": "工作",
+    "example": "일이 많아요.",
+    "exampleZh": "事情很多。",
+    "level": "入門"
+  },
+  {
+    "id": "jikjang",
+    "ko": "직장",
+    "zh": "職場",
+    "roman": "jikjang",
+    "category": "工作",
+    "example": "직장에 다녀요.",
+    "exampleZh": "去職場上班。",
+    "level": "入門"
+  },
+  {
+    "id": "dongnyo",
+    "ko": "동료",
+    "zh": "同事",
+    "roman": "dongnyo",
+    "category": "工作",
+    "example": "동료가 도와줘요.",
+    "exampleZh": "同事幫忙。",
+    "level": "入門"
+  },
+  {
+    "id": "hoeui",
+    "ko": "회의",
+    "zh": "會議",
+    "roman": "hoeui",
+    "category": "工作",
+    "example": "오후에 회의가 있어요.",
+    "exampleZh": "下午有會議。",
+    "level": "入門"
+  },
+  {
+    "id": "imeil",
+    "ko": "이메일",
+    "zh": "電子郵件",
+    "roman": "imeil",
+    "category": "工作",
+    "example": "이메일을 보내요.",
+    "exampleZh": "寄電子郵件。",
+    "level": "入門"
+  },
+  {
+    "id": "bogoseo",
+    "ko": "보고서",
+    "zh": "報告",
+    "roman": "bogoseo",
+    "category": "工作",
+    "example": "보고서를 써요.",
+    "exampleZh": "寫報告。",
+    "level": "入門"
+  },
+  {
+    "id": "chulgeun",
+    "ko": "출근",
+    "zh": "上班",
+    "roman": "chulgeun",
+    "category": "工作",
+    "example": "아홉 시에 출근해요.",
+    "exampleZh": "九點上班。",
+    "level": "入門"
+  },
+  {
+    "id": "toegeun",
+    "ko": "퇴근",
+    "zh": "下班",
+    "roman": "toegeun",
+    "category": "工作",
+    "example": "여섯 시에 퇴근해요.",
+    "exampleZh": "六點下班。",
+    "level": "入門"
+  },
+  {
+    "id": "wolgeup",
+    "ko": "월급",
+    "zh": "薪水",
+    "roman": "wolgeup",
+    "category": "工作",
+    "example": "월급이 들어왔어요.",
+    "exampleZh": "薪水入帳了。",
+    "level": "入門"
+  },
+  {
+    "id": "hyuil",
+    "ko": "휴일",
+    "zh": "假日",
+    "roman": "hyuil",
+    "category": "工作",
+    "example": "휴일에 쉬어요.",
+    "exampleZh": "假日休息。",
+    "level": "入門"
+  },
+  {
+    "id": "seonggong",
+    "ko": "성공",
+    "zh": "成功",
+    "roman": "seonggong",
+    "category": "工作",
+    "example": "성공을 빌어요.",
+    "exampleZh": "祝你成功。",
+    "level": "入門"
+  },
+  {
+    "id": "gyehoek",
+    "ko": "계획",
+    "zh": "計畫",
+    "roman": "gyehoek",
+    "category": "工作",
+    "example": "여행 계획이 있어요.",
+    "exampleZh": "有旅行計畫。",
+    "level": "入門"
+  },
+  {
+    "id": "mokpyo",
+    "ko": "목표",
+    "zh": "目標",
+    "roman": "mokpyo",
+    "category": "工作",
+    "example": "목표가 뭐예요?",
+    "exampleZh": "目標是什麼？",
+    "level": "入門"
+  },
+  {
+    "id": "noryeokhada",
+    "ko": "노력하다",
+    "zh": "努力",
+    "roman": "noryeokhada",
+    "category": "工作",
+    "example": "열심히 노력해요.",
+    "exampleZh": "努力用功。",
+    "level": "入門"
+  },
+  {
+    "id": "kkot",
+    "ko": "꽃",
+    "zh": "花",
+    "roman": "kkot",
+    "category": "自然",
+    "example": "꽃이 피었어요.",
+    "exampleZh": "花開了。",
+    "level": "入門"
+  },
+  {
+    "id": "namu",
+    "ko": "나무",
+    "zh": "樹",
+    "roman": "namu",
+    "category": "自然",
+    "example": "나무 아래에서 쉬어요.",
+    "exampleZh": "在樹下休息。",
+    "level": "入門"
+  },
+  {
+    "id": "gang",
+    "ko": "강",
+    "zh": "河",
+    "roman": "gang",
+    "category": "自然",
+    "example": "강가를 걸어요.",
+    "exampleZh": "在河邊走。",
+    "level": "入門"
+  },
+  {
+    "id": "hosu",
+    "ko": "호수",
+    "zh": "湖",
+    "roman": "hosu",
+    "category": "自然",
+    "example": "호수가 아름다워요.",
+    "exampleZh": "湖很美。",
+    "level": "入門"
+  },
+  {
+    "id": "byeol",
+    "ko": "별",
+    "zh": "星星",
+    "roman": "byeol",
+    "category": "自然",
+    "example": "밤에 별을 봐요.",
+    "exampleZh": "晚上看星星。",
+    "level": "入門"
+  },
+  {
+    "id": "haneul",
+    "ko": "하늘",
+    "zh": "天空",
+    "roman": "haneul",
+    "category": "自然",
+    "example": "하늘이 푸르러요.",
+    "exampleZh": "天空很藍。",
+    "level": "入門"
+  },
+  {
+    "id": "ttang",
+    "ko": "땅",
+    "zh": "土地",
+    "roman": "ttang",
+    "category": "自然",
+    "example": "땅에 앉아요.",
+    "exampleZh": "坐在地上。",
+    "level": "入門"
+  },
+  {
+    "id": "dongmul",
+    "ko": "동물",
+    "zh": "動物",
+    "roman": "dongmul",
+    "category": "自然",
+    "example": "동물을 좋아해요.",
+    "exampleZh": "喜歡動物。",
+    "level": "入門"
+  },
+  {
+    "id": "sae",
+    "ko": "새",
+    "zh": "鳥",
+    "roman": "sae",
+    "category": "自然",
+    "example": "새가 날아요.",
+    "exampleZh": "鳥在飛。",
+    "level": "入門"
+  },
+  {
+    "id": "mulgogi",
+    "ko": "물고기",
+    "zh": "魚",
+    "roman": "mulgogi",
+    "category": "自然",
+    "example": "물고기가 헤엄쳐요.",
+    "exampleZh": "魚在游。",
+    "level": "入門"
+  },
+  {
+    "id": "sup",
+    "ko": "숲",
+    "zh": "森林",
+    "roman": "sup",
+    "category": "自然",
+    "example": "숲이 조용해요.",
+    "exampleZh": "森林很安靜。",
+    "level": "入門"
+  },
+  {
+    "id": "dol",
+    "ko": "돌",
+    "zh": "石頭",
+    "roman": "dol",
+    "category": "自然",
+    "example": "작은 돌을 주웠어요.",
+    "exampleZh": "撿了小石頭。",
+    "level": "入門"
+  },
+  {
+    "id": "pul",
+    "ko": "풀",
+    "zh": "草",
+    "roman": "pul",
+    "category": "自然",
+    "example": "푸른 풀이 있어요.",
+    "exampleZh": "有綠草。",
+    "level": "入門"
+  },
+  {
+    "id": "jayeon",
+    "ko": "자연",
+    "zh": "自然",
+    "roman": "jayeon",
+    "category": "自然",
+    "example": "자연이 아름다워요.",
+    "exampleZh": "自然很美。",
+    "level": "入門"
+  },
+  {
+    "id": "yeolda",
+    "ko": "열다",
+    "zh": "打開",
+    "roman": "yeolda",
+    "category": "動詞",
+    "example": "문을 열어요.",
+    "exampleZh": "開門。",
+    "level": "入門"
+  },
+  {
+    "id": "datda",
+    "ko": "닫다",
+    "zh": "關閉",
+    "roman": "datda",
+    "category": "動詞",
+    "example": "창문을 닫아요.",
+    "exampleZh": "關窗。",
+    "level": "入門"
+  },
+  {
+    "id": "neota",
+    "ko": "넣다",
+    "zh": "放入",
+    "roman": "neota",
+    "category": "動詞",
+    "example": "가방에 넣어요.",
+    "exampleZh": "放進包包。",
+    "level": "入門"
+  },
+  {
+    "id": "kkeonaeda",
+    "ko": "꺼내다",
+    "zh": "拿出",
+    "roman": "kkeonaeda",
+    "category": "動詞",
+    "example": "책을 꺼내요.",
+    "exampleZh": "拿出書。",
+    "level": "入門"
+  },
+  {
+    "id": "juda",
+    "ko": "주다",
+    "zh": "給",
+    "roman": "juda",
+    "category": "動詞",
+    "example": "선물을 줘요.",
+    "exampleZh": "給禮物。",
+    "level": "入門"
+  },
+  {
+    "id": "batda",
+    "ko": "받다",
+    "zh": "收到",
+    "roman": "batda",
+    "category": "動詞",
+    "example": "편지를 받았어요.",
+    "exampleZh": "收到信了。",
+    "level": "入門"
+  },
+  {
+    "id": "bonaeda",
+    "ko": "보내다",
+    "zh": "寄／送",
+    "roman": "bonaeda",
+    "category": "動詞",
+    "example": "메시지를 보내요.",
+    "exampleZh": "寄訊息。",
+    "level": "入門"
+  },
+  {
+    "id": "chatda",
+    "ko": "찾다",
+    "zh": "找",
+    "roman": "chatda",
+    "category": "動詞",
+    "example": "열쇠를 찾아요.",
+    "exampleZh": "找鑰匙。",
+    "level": "入門"
+  },
+  {
+    "id": "ilta",
+    "ko": "잃다",
+    "zh": "遺失",
+    "roman": "ilta",
+    "category": "動詞",
+    "example": "지갑을 잃었어요.",
+    "exampleZh": "錢包弄丟了。",
+    "level": "入門"
+  },
+  {
+    "id": "sijakada",
+    "ko": "시작하다",
+    "zh": "開始",
+    "roman": "sijakada",
+    "category": "動詞",
+    "example": "수업을 시작해요.",
+    "exampleZh": "開始上課。",
+    "level": "入門"
+  },
+  {
+    "id": "kkeutnaeda",
+    "ko": "끝내다",
+    "zh": "結束",
+    "roman": "kkeutnaeda",
+    "category": "動詞",
+    "example": "일을 끝냈어요.",
+    "exampleZh": "工作結束了。",
+    "level": "入門"
+  },
+  {
+    "id": "gyesokhada",
+    "ko": "계속하다",
+    "zh": "繼續",
+    "roman": "gyesokhada",
+    "category": "動詞",
+    "example": "공부를 계속해요.",
+    "exampleZh": "繼續讀書。",
+    "level": "入門"
+  },
+  {
+    "id": "meomchuda",
+    "ko": "멈추다",
+    "zh": "停止",
+    "roman": "meomchuda",
+    "category": "動詞",
+    "example": "잠깐 멈춰요.",
+    "exampleZh": "暫停一下。",
+    "level": "入門"
+  },
+  {
+    "id": "utda",
+    "ko": "웃다",
+    "zh": "笑",
+    "roman": "utda",
+    "category": "動詞",
+    "example": "크게 웃어요.",
+    "exampleZh": "大笑。",
+    "level": "入門"
+  },
+  {
+    "id": "ulda",
+    "ko": "울다",
+    "zh": "哭",
+    "roman": "ulda",
+    "category": "動詞",
+    "example": "슬퍼서 울어요.",
+    "exampleZh": "難過所以哭。",
+    "level": "入門"
+  },
+  {
+    "id": "noraehada",
+    "ko": "노래하다",
+    "zh": "唱歌",
+    "roman": "noraehada",
+    "category": "動詞",
+    "example": "같이 노래해요.",
+    "exampleZh": "一起唱歌。",
+    "level": "入門"
+  },
+  {
+    "id": "chumchuda",
+    "ko": "춤추다",
+    "zh": "跳舞",
+    "roman": "chumchuda",
+    "category": "動詞",
+    "example": "춤을 춰요.",
+    "exampleZh": "跳舞。",
+    "level": "入門"
+  },
+  {
+    "id": "geurida",
+    "ko": "그리다",
+    "zh": "畫",
+    "roman": "geurida",
+    "category": "動詞",
+    "example": "그림을 그려요.",
+    "exampleZh": "畫畫。",
+    "level": "入門"
+  },
+  {
+    "id": "mandeulda",
+    "ko": "만들다",
+    "zh": "做／製作",
+    "roman": "mandeulda",
+    "category": "動詞",
+    "example": "케이크를 만들어요.",
+    "exampleZh": "做蛋糕。",
+    "level": "入門"
+  },
+  {
+    "id": "goreuda",
+    "ko": "고르다",
+    "zh": "選擇",
+    "roman": "goreuda",
+    "category": "動詞",
+    "example": "하나를 고르세요.",
+    "exampleZh": "請選一個。",
+    "level": "入門"
+  },
+  {
+    "id": "achimbap",
+    "ko": "아침밥",
+    "zh": "早餐",
+    "roman": "achimbap",
+    "category": "飲食",
+    "example": "아침밥을 먹어요.",
+    "exampleZh": "吃早餐。",
+    "level": "入門"
+  },
+  {
+    "id": "banchan",
+    "ko": "반찬",
+    "zh": "配菜",
+    "roman": "banchan",
+    "category": "飲食",
+    "example": "반찬이 많아요.",
+    "exampleZh": "配菜很多。",
+    "level": "入門"
+  },
+  {
+    "id": "guk",
+    "ko": "국",
+    "zh": "湯",
+    "roman": "guk",
+    "category": "飲食",
+    "example": "미역국을 먹어요.",
+    "exampleZh": "喝海帶湯。",
+    "level": "入門"
+  },
+  {
+    "id": "jjigae",
+    "ko": "찌개",
+    "zh": "鍋／湯品",
+    "roman": "jjigae",
+    "category": "飲食",
+    "example": "김치찌개가 맛있어요.",
+    "exampleZh": "泡菜鍋很好吃。",
+    "level": "入門"
+  },
+  {
+    "id": "tteok",
+    "ko": "떡",
+    "zh": "年糕",
+    "roman": "tteok",
+    "category": "飲食",
+    "example": "떡을 좋아해요.",
+    "exampleZh": "喜歡年糕。",
+    "level": "入門"
+  },
+  {
+    "id": "gwaja",
+    "ko": "과자",
+    "zh": "零食",
+    "roman": "gwaja",
+    "category": "飲食",
+    "example": "과자를 먹어요.",
+    "exampleZh": "吃零食。",
+    "level": "入門"
+  },
+  {
+    "id": "aiseukeurim",
+    "ko": "아이스크림",
+    "zh": "冰淇淋",
+    "roman": "aiseukeurim",
+    "category": "飲食",
+    "example": "아이스크림 먹을래요?",
+    "exampleZh": "要吃冰淇淋嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "chokollit",
+    "ko": "초콜릿",
+    "zh": "巧克力",
+    "roman": "chokollit",
+    "category": "飲食",
+    "example": "초콜릿이 달아요.",
+    "exampleZh": "巧克力很甜。",
+    "level": "入門"
+  },
+  {
+    "id": "seoltang",
+    "ko": "설탕",
+    "zh": "糖",
+    "roman": "seoltang",
+    "category": "飲食",
+    "example": "설탕을 넣어요.",
+    "exampleZh": "加糖。",
+    "level": "入門"
+  },
+  {
+    "id": "sogeum",
+    "ko": "소금",
+    "zh": "鹽",
+    "roman": "sogeum",
+    "category": "飲食",
+    "example": "소금을 조금 넣어요.",
+    "exampleZh": "加一點鹽。",
+    "level": "入門"
+  },
+  {
+    "id": "maepda",
+    "ko": "맵다",
+    "zh": "辣",
+    "roman": "maepda",
+    "category": "飲食",
+    "example": "이 음식이 매워요.",
+    "exampleZh": "這食物很辣。",
+    "level": "入門"
+  },
+  {
+    "id": "dalda",
+    "ko": "달다",
+    "zh": "甜",
+    "roman": "dalda",
+    "category": "飲食",
+    "example": "과일이 달아요.",
+    "exampleZh": "水果很甜。",
+    "level": "入門"
+  },
+  {
+    "id": "jjada",
+    "ko": "짜다",
+    "zh": "鹹",
+    "roman": "jjada",
+    "category": "飲食",
+    "example": "국이 짜요.",
+    "exampleZh": "湯很鹹。",
+    "level": "入門"
+  },
+  {
+    "id": "sida",
+    "ko": "시다",
+    "zh": "酸",
+    "roman": "sida",
+    "category": "飲食",
+    "example": "레몬이 셔요.",
+    "exampleZh": "檸檬很酸。",
+    "level": "入門"
+  },
+  {
+    "id": "cheoeum-boepgetseumnida",
+    "ko": "처음 뵙겠습니다",
+    "zh": "初次見面",
+    "roman": "cheoeum boepgetseumnida",
+    "category": "問候",
+    "example": "처음 뵙겠습니다. 잘 부탁해요.",
+    "exampleZh": "初次見面，請多指教。",
+    "level": "入門"
+  },
+  {
+    "id": "oraeganmanieyo",
+    "ko": "오래간만이에요",
+    "zh": "好久不見",
+    "roman": "oraeganmanieyo",
+    "category": "問候",
+    "example": "오래간만이에요! 잘 지냈어요?",
+    "exampleZh": "好久不見！過得好嗎？",
+    "level": "入門"
+  },
+  {
+    "id": "saengil-chukahaeyo",
+    "ko": "생일 축하해요",
+    "zh": "生日快樂",
+    "roman": "saengil chukahaeyo",
+    "category": "問候",
+    "example": "생일 축하해요!",
+    "exampleZh": "生日快樂！",
+    "level": "入門"
+  },
+  {
+    "id": "saehae-bok-mani-badeuseyo",
+    "ko": "새해 복 많이 받으세요",
+    "zh": "新年快樂",
+    "roman": "saehae bok mani badeuseyo",
+    "category": "問候",
+    "example": "새해 복 많이 받으세요.",
+    "exampleZh": "新年快樂。",
+    "level": "入門"
+  },
+  {
+    "id": "sugohaseyo",
+    "ko": "수고하세요",
+    "zh": "辛苦了（進行中）",
+    "roman": "sugohaseyo",
+    "category": "問候",
+    "example": "오늘도 수고하세요.",
+    "exampleZh": "今天也辛苦了。",
+    "level": "入門"
+  },
+  {
+    "id": "sugohasyeosseoyo",
+    "ko": "수고하셨어요",
+    "zh": "辛苦了（完成）",
+    "roman": "sugohasyeosseoyo",
+    "category": "問候",
+    "example": "정말 수고하셨어요.",
+    "exampleZh": "真的辛苦了。",
+    "level": "入門"
+  },
+  {
+    "id": "josimhaseyo",
+    "ko": "조심하세요",
+    "zh": "請小心",
+    "roman": "josimhaseyo",
+    "category": "問候",
+    "example": "길에서 조심하세요.",
+    "exampleZh": "路上請小心。",
+    "level": "入門"
+  },
+  {
+    "id": "geonganghaseyo",
+    "ko": "건강하세요",
+    "zh": "請保重",
+    "roman": "geonganghaseyo",
+    "category": "問候",
+    "example": "항상 건강하세요.",
+    "exampleZh": "請一直保重。",
+    "level": "入門"
+  },
+  {
+    "id": "deureogaseyo",
+    "ko": "들어가세요",
+    "zh": "请进／慢走回家",
+    "roman": "deureogaseyo",
+    "category": "問候",
+    "example": "안녕히 들어가세요.",
+    "exampleZh": "請慢走（回家）。",
+    "level": "入門"
+  },
+  {
+    "id": "gyeseyo",
+    "ko": "계세요",
+    "zh": "請留步／再見",
+    "roman": "gyeseyo",
+    "category": "問候",
+    "example": "안녕히 계세요.",
+    "exampleZh": "請留步（對方留下）。",
+    "level": "入門"
+  }
+]

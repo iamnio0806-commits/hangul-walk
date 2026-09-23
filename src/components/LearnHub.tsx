@@ -75,8 +75,8 @@ export function TodayPanel({
         <button type="button" className="ritual-step" onClick={() => onOpenStage('vocab')}>
           <span className="ritual-num">④</span>
           <div>
-            <h3>單字路徑</h3>
-            <p>打招呼、自我介紹、咖啡館——一批一批收。</p>
+            <h3>單字＋句子</h3>
+            <p>入門詞庫可搜尋瀏覽；路徑課一批一批收，每詞都有例句。</p>
           </div>
           <span className="ritual-go">打開 →</span>
         </button>
@@ -118,8 +118,8 @@ const stageCopy: Record<Stage, { title: string; ko: string; blurb: string }> = {
   },
   vocab: {
     title: '單字路徑',
-    ko: '단어 길',
-    blurb: '一批一批收單字。閃卡＋拼字，不考試。',
+    ko: '단어 + 문장',
+    blurb: '每包 8 個字，單字＋例句一起收。也可回瀏覽庫搜尋。',
   },
 }
 

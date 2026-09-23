@@ -1105,6 +1105,134 @@ img {
   font-size: 0.95rem;
 }
 
+.flash-sentence {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+  margin: 0 0 0.75rem;
+  line-height: 1.45;
+}
+
+.flash-sentence-zh {
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+
+.teach-example {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+  margin-top: 0.55rem;
+  padding: 0.65rem 0.75rem;
+  width: 100%;
+  text-align: left;
+  background: rgba(61, 122, 106, 0.06);
+  border-radius: var(--radius);
+  border: 1px solid rgba(61, 122, 106, 0.12);
+  transition: background 0.2s;
+}
+
+.teach-example:hover {
+  background: rgba(61, 122, 106, 0.12);
+}
+
+.ex-ko {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--celadon-deep);
+}
+
+.ex-zh {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.vocab-search {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1.5px solid rgba(26, 36, 32, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.85rem;
+  font-size: 1rem;
+}
+
+.vocab-search:focus {
+  outline: none;
+  border-color: var(--celadon);
+}
+
+.cat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.cat-chip {
+  padding: 0.4rem 0.7rem;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  border: 1px solid rgba(26, 36, 32, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.cat-chip.active {
+  color: var(--celadon-deep);
+  border-color: var(--celadon);
+  background: #e8f4f0;
+}
+
+.vocab-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(26, 36, 32, 0.08);
+}
+
+.vocab-row {
+  border-bottom: 1px solid rgba(26, 36, 32, 0.08);
+}
+
+.vocab-main {
+  display: grid;
+  grid-template-columns: 7rem 1fr auto;
+  gap: 0.75rem;
+  align-items: baseline;
+  width: 100%;
+  padding: 0.95rem 0;
+  text-align: left;
+}
+
+.vocab-ko {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--celadon-deep);
+  font-weight: 600;
+}
+
+.vocab-zh {
+  font-size: 0.98rem;
+}
+
+.vocab-cat {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.vocab-detail {
+  padding: 0 0 1rem;
+}
+
+@media (max-width: 600px) {
+  .vocab-main {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+}
+
 .modal-scrim {
   position: fixed;
   inset: 0;

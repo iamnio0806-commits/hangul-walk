@@ -74,6 +74,17 @@ export function LessonView({ lesson, alreadyDone, onBack, onComplete }: Props) {
                 {row.roman}
                 {row.note ? ` · ${row.note}` : ''}
               </p>
+              {row.example && (
+                <button
+                  type="button"
+                  className="teach-example"
+                  onClick={() => speakKo(row.example!)}
+                  title="聽例句"
+                >
+                  <span className="ex-ko">{row.example}</span>
+                  {row.exampleZh && <span className="ex-zh">{row.exampleZh}</span>}
+                </button>
+              )}
             </div>
           </motion.div>
         ))}

@@ -1,4 +1,6 @@
-/** 한글산책 — mirrored from Wortklang selflearn: sounds → spelling → vocab (no exams) */
+/** 한글산책 — sounds → spelling → vocab+sentences (no exams) */
+
+import { vocabPacks, type VocabWord } from './vocabulary'
 
 export type Stage = 'sounds' | 'spelling' | 'vocab'
 
@@ -7,6 +9,8 @@ export interface TeachItem {
   zh: string
   roman?: string
   note?: string
+  example?: string
+  exampleZh?: string
 }
 
 export type PracticeKind = 'match' | 'pick' | 'build' | 'spell' | 'flash'
@@ -20,7 +24,6 @@ export interface Practice {
   hint?: string
   pairs?: { left: string; right: string }[]
   tiles?: string[]
-  /** for spell: Chinese clue → type Korean */
   clueZh?: string
 }
 
@@ -38,9 +41,8 @@ export interface Lesson {
   joy: string
 }
 
-/** 九音：韓文入門最常用的九個母音（對齊德文「先教發音」） */
 export const NINE_SOUNDS: TeachItem[] = [
-  { ko: 'ㅏ', zh: '啊', roman: 'a', note: '嘴巴向右開，像「啊」' },
+  { ko: 'ㅏ', zh: '啊', roman: 'a', note: '嘴巴向右開，像「啊」', example: '아', exampleZh: '啊（感嘆）' },
   { ko: 'ㅓ', zh: '呃', roman: 'eo', note: '比喔更扁，舌往後' },
   { ko: 'ㅗ', zh: '喔', roman: 'o', note: '嘴唇圓圓往前' },
   { ko: 'ㅜ', zh: '嗚', roman: 'u', note: '嘟嘴，像吹氣' },
@@ -64,7 +66,7 @@ export const CORE_CONSONANTS: TeachItem[] = [
   { ko: 'ㅎ', zh: 'h', roman: 'h', note: '輕呼氣' },
 ]
 
-export const lessons: Lesson[] = [
+const foundationLessons: Lesson[] = [
   {
     id: 'sound-nine',
     stage: 'sounds',
@@ -81,7 +83,7 @@ export const lessons: Lesson[] = [
     teach: NINE_SOUNDS,
     practice: {
       kind: 'match',
-      prompt: '把九音和中文感覺連起來（不必一次全對，連完就好）。',
+      prompt: '把九音和中文感覺連起來。',
       pairs: [
         { left: 'ㅏ', right: '啊 · a' },
         { left: 'ㅗ', right: '喔 · o' },
@@ -130,12 +132,12 @@ export const lessons: Lesson[] = [
       '세로형：子音在上、母音在下（ㅗㅜㅡ…）',
     ],
     teach: [
-      { ko: '나', zh: '我', roman: 'na', note: 'ㄴ + ㅏ' },
-      { ko: '너', zh: '你（親）', roman: 'neo', note: 'ㄴ + ㅓ' },
+      { ko: '나', zh: '我', roman: 'na', note: 'ㄴ + ㅏ', example: '나는 학생이에요.', exampleZh: '我是學生。' },
+      { ko: '너', zh: '你（親）', roman: 'neo', note: 'ㄴ + ㅓ', example: '너는 이름이 뭐야?', exampleZh: '你叫什麼名字？' },
       { ko: '고', zh: '且／去', roman: 'go', note: 'ㄱ + ㅗ' },
       { ko: '미', zh: '美', roman: 'mi', note: 'ㅁ + ㅣ' },
       { ko: '수', zh: '水／數', roman: 'su', note: 'ㅅ + ㅜ' },
-      { ko: '이', zh: '這／名字尾', roman: 'i', note: 'ㅇ + ㅣ（ㅇ 無聲）' },
+      { ko: '이', zh: '這／名字尾', roman: 'i', note: 'ㅇ + ㅣ（ㅇ 無聲）', example: '이름이 뭐예요?', exampleZh: '名字是什麼？' },
     ],
     practice: {
       kind: 'build',
@@ -155,17 +157,13 @@ export const lessons: Lesson[] = [
     titleKo: '받아쓰기',
     minutes: 10,
     summary: '對齊德文「今日拼字小測驗」——看到中文，試著打出韓文。錯了重來，不算分。',
-    points: [
-      '可以看提示，不丢人',
-      '打得出來比打得快重要',
-      '完成一次就標記「我會了」',
-    ],
+    points: ['可以看提示，不丢人', '打得出來比打得快重要', '完成一次就標記「我會了」'],
     teach: [
-      { ko: '물', zh: '水', roman: 'mul', note: 'ㅁ + ㅜ + ㄹ' },
+      { ko: '물', zh: '水', roman: 'mul', note: 'ㅁ + ㅜ + ㄹ', example: '물 한 잔 주세요.', exampleZh: '請給我一杯水。' },
       { ko: '불', zh: '火', roman: 'bul', note: 'ㅂ + ㅜ + ㄹ' },
-      { ko: '손', zh: '手', roman: 'son', note: 'ㅅ + ㅗ + ㄴ' },
-      { ko: '발', zh: '腳', roman: 'bal', note: 'ㅂ + ㅏ + ㄹ' },
-      { ko: '눈', zh: '眼睛／雪', roman: 'nun', note: 'ㄴ + ㅜ + ㄴ' },
+      { ko: '손', zh: '手', roman: 'son', note: 'ㅅ + ㅗ + ㄴ', example: '손을 씻어요.', exampleZh: '洗手。' },
+      { ko: '발', zh: '腳', roman: 'bal', note: 'ㅂ + ㅏ + ㄹ', example: '발이 아파요.', exampleZh: '腳痛。' },
+      { ko: '눈', zh: '眼睛／雪', roman: 'nun', note: 'ㄴ + ㅜ + ㄴ', example: '눈이 커요.', exampleZh: '眼睛很大。' },
     ],
     practice: {
       kind: 'spell',
@@ -176,111 +174,68 @@ export const lessons: Lesson[] = [
     },
     joy: '拼字肌肉開始發熱了。下一步：把字收進單字路徑。',
   },
-  {
-    id: 'vocab-hello',
-    stage: 'vocab',
-    order: 5,
-    title: '單字：打招呼的溫度',
-    titleKo: '인사 단어',
-    minutes: 10,
-    summary: '聲音和拼字穩了，開始收單字。今天五個見面就用得到的詞。',
-    points: [
-      '안녕하세요＝標準問候',
-      '謝謝有正式／隨和兩種溫度',
-      '閃卡：先聽 → 猜 → 翻開',
-    ],
-    teach: [
-      { ko: '안녕하세요', zh: '你好（禮貌）', roman: 'annyeonghaseyo' },
-      { ko: '안녕', zh: '嗨／掰', roman: 'annyeong' },
-      { ko: '감사합니다', zh: '謝謝（正式）', roman: 'gamsahamnida' },
-      { ko: '고마워', zh: '謝謝（親）', roman: 'gomawo' },
-      { ko: '네', zh: '是／好的', roman: 'ne' },
-    ],
-    practice: {
-      kind: 'flash',
-      prompt: '閃卡練習：先想意思，再翻開。全部看過就算完成。',
-      answer: 'done',
-    },
-    joy: '單字路徑第一站完成。明天還可以再收一批。',
-  },
-  {
-    id: 'vocab-me',
-    stage: 'vocab',
-    order: 6,
-    title: '單字：我是誰',
-    titleKo: '자기소개',
-    minutes: 10,
-    summary: '自我介紹超短版——名字、我、韓國／台灣。',
-    points: [
-      '저＝禮貌的「我」',
-      '입니다＝正式「是」',
-      '先背塊，再慢慢拆文法',
-    ],
-    teach: [
-      { ko: '저', zh: '我（禮貌）', roman: 'jeo' },
-      { ko: '이름', zh: '名字', roman: 'ireum' },
-      { ko: '입니다', zh: '是（正式）', roman: 'imnida' },
-      { ko: '한국', zh: '韓國', roman: 'hanguk' },
-      { ko: '대만', zh: '台灣', roman: 'daeman' },
-    ],
-    practice: {
-      kind: 'spell',
-      prompt: '看中文打韓文。',
-      clueZh: '韓國',
-      answer: '한국',
-      hint: 'han-guk',
-    },
-    joy: '你可以說：저 ○○입니다。超酷。',
-  },
-  {
-    id: 'vocab-cafe',
-    stage: 'vocab',
-    order: 7,
-    title: '單字：咖啡館生存包',
-    titleKo: '카페 단어',
-    minutes: 10,
-    summary: '點一杯就夠用的詞——生活韓文開始了。',
-    points: [
-      '주세요＝請給我',
-      '아이스＝冰的',
-      '先會點，文法之後補',
-    ],
-    teach: [
-      { ko: '주세요', zh: '請給我', roman: 'juseyo' },
-      { ko: '커피', zh: '咖啡', roman: 'keopi' },
-      { ko: '아이스', zh: '冰的', roman: 'aiseu' },
-      { ko: '물', zh: '水', roman: 'mul' },
-      { ko: '얼마예요', zh: '多少錢？', roman: 'eolmayeyo' },
-    ],
-    practice: {
-      kind: 'pick',
-      prompt: '想說「請給我」，選哪個？',
-      options: ['주세요', '안녕하세요', '네', '이름'],
-      answer: '주세요',
-    },
-    joy: '下一杯，試著說：아이스 커피 주세요。',
-  },
 ]
 
-export interface VocabWord {
-  id: string
-  ko: string
-  zh: string
-  roman: string
-  lessonId?: string
+function wordToTeach(w: VocabWord): TeachItem {
+  return {
+    ko: w.ko,
+    zh: w.zh,
+    roman: w.roman,
+    example: w.example,
+    exampleZh: w.exampleZh,
+  }
 }
 
-export const vocabBank: VocabWord[] = lessons
-  .filter((l) => l.stage === 'vocab')
-  .flatMap((l) =>
-    l.teach.map((t, i) => ({
-      id: `${l.id}-${i}`,
-      ko: t.ko,
-      zh: t.zh,
-      roman: t.roman ?? '',
-      lessonId: l.id,
-    })),
-  )
+function packToLesson(pack: ReturnType<typeof vocabPacks>[number], order: number): Lesson {
+  const teach = pack.words.map(wordToTeach)
+  const sample = pack.words[0]
+  const second = pack.words[1] ?? pack.words[0]
+  const practice: Practice =
+    order % 3 === 0
+      ? {
+          kind: 'spell',
+          prompt: '看中文，打出韓文（今日拼字）。',
+          clueZh: sample.zh,
+          answer: sample.ko,
+          hint: sample.roman,
+        }
+      : order % 3 === 1
+        ? {
+            kind: 'pick',
+            prompt: `「${sample.zh}」用韓文怎麼說？`,
+            options: [sample.ko, second.ko, pack.words[2]?.ko ?? '네', pack.words[3]?.ko ?? '물'].filter(
+              (v, i, a) => a.indexOf(v) === i,
+            ),
+            answer: sample.ko,
+          }
+        : {
+            kind: 'flash',
+            prompt: '閃卡：先看單字與句子，再翻開意思。全部看過就算完成。',
+            answer: 'done',
+          }
+
+  return {
+    id: pack.id,
+    stage: 'vocab',
+    order,
+    title: `單字＋句子：${pack.category}`,
+    titleKo: pack.category,
+    minutes: 12,
+    summary: `這一包 ${pack.words.length} 個「${pack.category}」單字，每個都附例句——像德文站一樣，單字要活在句子裡。`,
+    points: [
+      '先聽單字，再聽整句',
+      '例句裡一定有這個詞',
+      '不考試；標記「我會了」即可',
+    ],
+    teach,
+    practice,
+    joy: `「${pack.category}」這一包收進口袋了。句子比單字記得更牢。`,
+  }
+}
+
+const vocabLessons = vocabPacks(8).map((p, i) => packToLesson(p, 5 + i))
+
+export const lessons: Lesson[] = [...foundationLessons, ...vocabLessons]
 
 export interface PathDay {
   day: number
@@ -290,7 +245,6 @@ export interface PathDay {
   focus: Stage
 }
 
-/** 線性路徑：九音 → 子音 → 拼字 → 單字（對齊德文單字路徑節奏） */
 export const pathDays: PathDay[] = [
   {
     day: 1,
@@ -320,27 +274,13 @@ export const pathDays: PathDay[] = [
     lessonIds: ['spell-type'],
     focus: 'spelling',
   },
-  {
-    day: 5,
-    title: 'Day 5 · 單字：打招呼',
-    tip: '正式收單字。閃卡聽完再翻。',
-    lessonIds: ['vocab-hello'],
-    focus: 'vocab',
-  },
-  {
-    day: 6,
-    title: 'Day 6 · 單字：我是誰',
-    tip: '自我介紹五個詞，拼一個「韓國」。',
-    lessonIds: ['vocab-me'],
-    focus: 'vocab',
-  },
-  {
-    day: 7,
-    title: 'Day 7 · 單字：咖啡館',
-    tip: '生活場景詞。學完可以點一杯。',
-    lessonIds: ['vocab-cafe'],
-    focus: 'vocab',
-  },
+  ...vocabLessons.map((l, i) => ({
+    day: 5 + i,
+    title: `Day ${5 + i} · ${l.title.replace('單字＋句子：', '')}`,
+    tip: '單字要配句子一起收。聽完例句再標記我會了。',
+    lessonIds: [l.id],
+    focus: 'vocab' as Stage,
+  })),
 ]
 
 export function getLesson(id: string) {
@@ -355,10 +295,17 @@ export function totalLessons() {
   return lessons.length
 }
 
+export function totalVocabWords() {
+  return vocabPacks(8).reduce((n, p) => n + p.words.length, 0)
+}
+
 export function nextIncomplete(completed: string[]) {
   for (const day of pathDays) {
     for (const id of day.lessonIds) {
-      if (!completed.includes(id)) return { day, lesson: getLesson(id)! }
+      if (!completed.includes(id)) {
+        const lesson = getLesson(id)
+        if (lesson) return { day, lesson }
+      }
     }
   }
   return null
