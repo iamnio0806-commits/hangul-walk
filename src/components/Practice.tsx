@@ -1,28 +1,44 @@
 import { useMemo, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import type { PracticeItem } from '../data/curriculum'
+import type { Practice as PracticeData, TeachItem } from '../data/curriculum'
+import { speakKo } from '../lib/speech'
 
 interface Props {
-  practice: PracticeItem
+  practice: PracticeData
+  teach?: TeachItem[]
   accent?: string
   onSolved: () => void
 }
 
-export function Practice({ practice, accent = '#e8f4f0', onSolved }: Props) {
+export function Practice({ practice, teach = [], accent = '#e8f4f0', onSolved }: Props) {
   if (practice.kind === 'match' && practice.pairs) {
     return <MatchPractice pairs={practice.pairs} prompt={practice.prompt} onSolved={onSolved} />
   }
-  if (practice.kind === 'build' && practice.syllables) {
+  if (practice.kind === 'build' && practice.tiles) {
     return (
       <BuildPractice
         prompt={practice.prompt}
         promptKo={practice.promptKo}
-        syllables={practice.syllables}
+        tiles={practice.tiles}
         answer={practice.answer}
         hint={practice.hint}
         onSolved={onSolved}
       />
     )
+  }
+  if (practice.kind === 'spell') {
+    return (
+      <SpellPractice
+        prompt={practice.prompt}
+        clueZh={practice.clueZh ?? practice.prompt}
+        answer={practice.answer}
+        hint={practice.hint}
+        onSolved={onSolved}
+      />
+    )
+  }
+  if (practice.kind === 'flash') {
+    return <FlashPractice items={teach} prompt={practice.prompt} onSolved={onSolved} />
   }
   return (
     <PickPractice
@@ -138,7 +154,12 @@ function MatchPractice({
               key={p.left}
               type="button"
               className={`match-item${selectedLeft === p.left ? ' selected' : ''}${matched.has(p.left) ? ' done' : ''}`}
-              onClick={() => !matched.has(p.left) && setSelectedLeft(p.left)}
+              onClick={() => {
+                if (!matched.has(p.left)) {
+                  setSelectedLeft(p.left)
+                  speakKo(p.left)
+                }
+              }}
               disabled={matched.has(p.left)}
             >
               {p.left}
@@ -170,14 +191,14 @@ function MatchPractice({
 function BuildPractice({
   prompt,
   promptKo,
-  syllables,
+  tiles,
   answer,
   hint,
   onSolved,
 }: {
   prompt: string
   promptKo?: string
-  syllables: string[]
+  tiles: string[]
   answer: string
   hint?: string
   onSolved: () => void
@@ -189,23 +210,19 @@ function BuildPractice({
     if (solved) return
     const next = [...built, s]
     setBuilt(next)
+    speakKo(s)
     if (next.join('') === answer.replace(/\s/g, '')) {
       setSolved(true)
       onSolved()
     }
   }
 
-  const clear = () => {
-    if (solved) return
-    setBuilt([])
-  }
-
   return (
     <div className="practice-block">
-      <p className="practice-label">輕鬆練習 · 不是考試</p>
+      <p className="practice-label">拼字練習 · 不是考試</p>
       <p className="practice-prompt">{prompt}</p>
       {promptKo && <p className="practice-prompt-ko">{promptKo}</p>}
-      <div className="build-tray" onClick={clear} title="點這裡清空重拼">
+      <div className="build-tray" onClick={() => !solved && setBuilt([])} title="點這裡清空">
         <AnimatePresence>
           {built.length === 0 && !solved && (
             <motion.span
@@ -229,13 +246,143 @@ function BuildPractice({
         </AnimatePresence>
       </div>
       <div className="option-grid">
-        {syllables.map((s) => (
+        {tiles.map((s) => (
           <button key={s} type="button" className="option-btn" onClick={() => add(s)}>
             {s}
           </button>
         ))}
       </div>
       {hint && !solved && <p className="hint">提示：{hint}</p>}
+    </div>
+  )
+}
+
+function SpellPractice({
+  prompt,
+  clueZh,
+  answer,
+  hint,
+  onSolved,
+}: {
+  prompt: string
+  clueZh: string
+  answer: string
+  hint?: string
+  onSolved: () => void
+}) {
+  const [value, setValue] = useState('')
+  const [wrong, setWrong] = useState(false)
+  const [ok, setOk] = useState(false)
+  const [showHint, setShowHint] = useState(false)
+
+  const check = () => {
+    const normalized = value.trim().replace(/\s/g, '')
+    if (normalized === answer) {
+      setOk(true)
+      setWrong(false)
+      speakKo(answer)
+      onSolved()
+    } else {
+      setWrong(true)
+      setTimeout(() => setWrong(false), 450)
+    }
+  }
+
+  return (
+    <div className="practice-block">
+      <p className="practice-label">今日拼字 · 不是考試</p>
+      <p className="practice-prompt">{prompt}</p>
+      <p className="practice-prompt-ko" style={{ fontFamily: 'var(--font-zh)', fontSize: '1.35rem' }}>
+        {clueZh}
+      </p>
+      <div className="spell-row">
+        <input
+          className={`spell-input${wrong ? ' wrong' : ''}${ok ? ' correct' : ''}`}
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && check()}
+          placeholder="在這裡打韓文"
+          disabled={ok}
+          autoCapitalize="off"
+          autoCorrect="off"
+        />
+        <button type="button" className="btn-primary" onClick={check} disabled={ok}>
+          {ok ? '對了' : '檢查'}
+        </button>
+      </div>
+      <div className="spell-tools">
+        <button type="button" className="btn-ghost" onClick={() => speakKo(answer)}>
+          聽正確發音
+        </button>
+        <button type="button" className="btn-ghost" onClick={() => setShowHint(true)}>
+          看提示
+        </button>
+      </div>
+      {showHint && hint && <p className="hint">提示：{hint}</p>}
+    </div>
+  )
+}
+
+function FlashPractice({
+  items,
+  prompt,
+  onSolved,
+}: {
+  items: TeachItem[]
+  prompt: string
+  onSolved: () => void
+}) {
+  const [i, setI] = useState(0)
+  const [revealed, setRevealed] = useState(false)
+  const [seen, setSeen] = useState(0)
+  const item = items[i]
+
+  if (!item) return null
+
+  const next = () => {
+    const n = seen + 1
+    setSeen(n)
+    if (n >= items.length) {
+      onSolved()
+      return
+    }
+    setI((i + 1) % items.length)
+    setRevealed(false)
+  }
+
+  return (
+    <div className="practice-block">
+      <p className="practice-label">閃卡 · 不是考試</p>
+      <p className="practice-prompt">{prompt}</p>
+      <div className="flash-card" onClick={() => { setRevealed(true); speakKo(item.ko) }}>
+        <p className="flash-ko">{item.ko}</p>
+        {revealed ? (
+          <p className="flash-zh">
+            {item.zh}
+            {item.roman ? ` · ${item.roman}` : ''}
+          </p>
+        ) : (
+          <p className="flash-zh mute">點一下顯示意思</p>
+        )}
+      </div>
+      <div className="cta-row">
+        <button
+          type="button"
+          className="btn-ghost"
+          onClick={() => {
+            setRevealed(true)
+            speakKo(item.ko)
+          }}
+        >
+          顯示意思
+        </button>
+        <button type="button" className="btn-primary" onClick={next} disabled={!revealed}>
+          {seen + 1 >= items.length ? '看完了' : '下一個'}
+        </button>
+      </div>
+      <p className="hint">
+        {Math.min(seen + (revealed ? 1 : 0), items.length)} / {items.length}
+      </p>
     </div>
   )
 }

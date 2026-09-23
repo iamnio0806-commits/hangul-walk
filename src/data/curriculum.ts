@@ -1,6 +1,17 @@
-export type PracticeKind = 'match' | 'build' | 'echo' | 'pick'
+/** 한글산책 — mirrored from Wortklang selflearn: sounds → spelling → vocab (no exams) */
 
-export interface PracticeItem {
+export type Stage = 'sounds' | 'spelling' | 'vocab'
+
+export interface TeachItem {
+  ko: string
+  zh: string
+  roman?: string
+  note?: string
+}
+
+export type PracticeKind = 'match' | 'pick' | 'build' | 'spell' | 'flash'
+
+export interface Practice {
   kind: PracticeKind
   prompt: string
   promptKo?: string
@@ -8,306 +19,347 @@ export interface PracticeItem {
   answer: string
   hint?: string
   pairs?: { left: string; right: string }[]
-  syllables?: string[]
+  tiles?: string[]
+  /** for spell: Chinese clue → type Korean */
+  clueZh?: string
 }
 
 export interface Lesson {
   id: string
+  stage: Stage
+  order: number
   title: string
   titleKo: string
   minutes: number
-  mood: string
-  story: string
-  teach: { ko: string; zh: string; note?: string; roman?: string }[]
-  practice: PracticeItem
+  summary: string
+  points: string[]
+  teach: TeachItem[]
+  practice: Practice
   joy: string
 }
 
-export interface Path {
+/** 九音：韓文入門最常用的九個母音（對齊德文「先教發音」） */
+export const NINE_SOUNDS: TeachItem[] = [
+  { ko: 'ㅏ', zh: '啊', roman: 'a', note: '嘴巴向右開，像「啊」' },
+  { ko: 'ㅓ', zh: '呃', roman: 'eo', note: '比喔更扁，舌往後' },
+  { ko: 'ㅗ', zh: '喔', roman: 'o', note: '嘴唇圓圓往前' },
+  { ko: 'ㅜ', zh: '嗚', roman: 'u', note: '嘟嘴，像吹氣' },
+  { ko: 'ㅡ', zh: '嗯（扁）', roman: 'eu', note: '嘴成一條線' },
+  { ko: 'ㅣ', zh: '衣', roman: 'i', note: '一條豎線，聲音亮' },
+  { ko: 'ㅐ', zh: '欸', roman: 'ae', note: 'ㅏ + ㅣ 的感覺' },
+  { ko: 'ㅔ', zh: '欸（稍扁）', roman: 'e', note: '和 ㅐ 很像，先聽感' },
+  { ko: 'ㅚ', zh: '威（圓）', roman: 'oe', note: 'ㅗ + ㅣ，嘴唇圓' },
+]
+
+export const CORE_CONSONANTS: TeachItem[] = [
+  { ko: 'ㄱ', zh: 'g/k', roman: 'g', note: '輕碰軟顎' },
+  { ko: 'ㄴ', zh: 'n', roman: 'n', note: '舌尖抵上牙齦' },
+  { ko: 'ㄷ', zh: 'd/t', roman: 'd', note: '舌尖輕彈' },
+  { ko: 'ㄹ', zh: 'r/l', roman: 'r', note: '輕彈一下' },
+  { ko: 'ㅁ', zh: 'm', roman: 'm', note: '雙唇合上' },
+  { ko: 'ㅂ', zh: 'b/p', roman: 'b', note: '雙唇爆破' },
+  { ko: 'ㅅ', zh: 's', roman: 's', note: '氣流從齒縫' },
+  { ko: 'ㅇ', zh: '（開頭無聲）/ ng', roman: 'ng', note: '開頭當占位，結尾是 ng' },
+  { ko: 'ㅈ', zh: 'j', roman: 'j', note: '像「基」的開頭' },
+  { ko: 'ㅎ', zh: 'h', roman: 'h', note: '輕呼氣' },
+]
+
+export const lessons: Lesson[] = [
+  {
+    id: 'sound-nine',
+    stage: 'sounds',
+    order: 1,
+    title: '九音：先把母音聽進身體',
+    titleKo: '모음 아홉',
+    minutes: 12,
+    summary: '和德文先學字母發音一樣——韓文也從聲音開始。今天只認識九個母音，不考試、不計時。',
+    points: [
+      '先聽再說，嘴巴形狀比死背重要',
+      'ㅏㅓㅗㅜㅡㅣ 是骨架，ㅐㅔㅚ 是常用延伸',
+      '聽不懂再點一次喇叭，錯了也沒關係',
+    ],
+    teach: NINE_SOUNDS,
+    practice: {
+      kind: 'match',
+      prompt: '把九音和中文感覺連起來（不必一次全對，連完就好）。',
+      pairs: [
+        { left: 'ㅏ', right: '啊 · a' },
+        { left: 'ㅗ', right: '喔 · o' },
+        { left: 'ㅣ', right: '衣 · i' },
+        { left: 'ㅜ', right: '嗚 · u' },
+        { left: 'ㅐ', right: '欸 · ae' },
+      ],
+      answer: 'matched',
+    },
+    joy: '九音入門完成。接下來用它們拼出真正的字。',
+  },
+  {
+    id: 'sound-consonants',
+    stage: 'sounds',
+    order: 2,
+    title: '子音積木',
+    titleKo: '자음 쌓기',
+    minutes: 10,
+    summary: '母音會「唱」，子音會「擋」。十個最常用子音，當成拼字積木。',
+    points: [
+      'ㅇ 開頭常常沒聲音，只是占位子',
+      'ㄱㄴㅁㅅㅂ 出現超頻繁，先混臉熟',
+      '先認得形狀，發音慢慢準就好',
+    ],
+    teach: CORE_CONSONANTS,
+    practice: {
+      kind: 'pick',
+      prompt: '「媽媽」엄마 的開頭子音是？',
+      options: ['ㅁ', 'ㄱ', 'ㅅ', 'ㅂ'],
+      answer: 'ㅁ',
+      hint: '嘴唇合起來的那個。',
+    },
+    joy: '積木齊了。可以開始拼音節。',
+  },
+  {
+    id: 'spell-syllable',
+    stage: 'spelling',
+    order: 3,
+    title: '拼出第一格：나',
+    titleKo: '첫 음절',
+    minutes: 12,
+    summary: '韓文一格＝一個音節。左邊／上面放子音，右邊／下面放母音。',
+    points: [
+      '나 = ㄴ + ㅏ',
+      '가로형：子音在左、母音在右（ㅏㅓㅣ…）',
+      '세로형：子音在上、母音在下（ㅗㅜㅡ…）',
+    ],
+    teach: [
+      { ko: '나', zh: '我', roman: 'na', note: 'ㄴ + ㅏ' },
+      { ko: '너', zh: '你（親）', roman: 'neo', note: 'ㄴ + ㅓ' },
+      { ko: '고', zh: '且／去', roman: 'go', note: 'ㄱ + ㅗ' },
+      { ko: '미', zh: '美', roman: 'mi', note: 'ㅁ + ㅣ' },
+      { ko: '수', zh: '水／數', roman: 'su', note: 'ㅅ + ㅜ' },
+      { ko: '이', zh: '這／名字尾', roman: 'i', note: 'ㅇ + ㅣ（ㅇ 無聲）' },
+    ],
+    practice: {
+      kind: 'build',
+      prompt: '拼出「我」나——選對積木。',
+      promptKo: '나',
+      tiles: ['ㄴ', 'ㅏ', 'ㅁ', 'ㅓ', 'ㄱ'],
+      answer: 'ㄴㅏ',
+      hint: '子音在左：ㄴ + ㅏ',
+    },
+    joy: '你拼出了나。拼字關卡正式打開。',
+  },
+  {
+    id: 'spell-type',
+    stage: 'spelling',
+    order: 4,
+    title: '今日拼字：看中文打韓文',
+    titleKo: '받아쓰기',
+    minutes: 10,
+    summary: '對齊德文「今日拼字小測驗」——看到中文，試著打出韓文。錯了重來，不算分。',
+    points: [
+      '可以看提示，不丢人',
+      '打得出來比打得快重要',
+      '完成一次就標記「我會了」',
+    ],
+    teach: [
+      { ko: '물', zh: '水', roman: 'mul', note: 'ㅁ + ㅜ + ㄹ' },
+      { ko: '불', zh: '火', roman: 'bul', note: 'ㅂ + ㅜ + ㄹ' },
+      { ko: '손', zh: '手', roman: 'son', note: 'ㅅ + ㅗ + ㄴ' },
+      { ko: '발', zh: '腳', roman: 'bal', note: 'ㅂ + ㅏ + ㄹ' },
+      { ko: '눈', zh: '眼睛／雪', roman: 'nun', note: 'ㄴ + ㅜ + ㄴ' },
+    ],
+    practice: {
+      kind: 'spell',
+      prompt: '看中文，打出韓文單字。',
+      clueZh: '水',
+      answer: '물',
+      hint: 'mul · ㅁㅜㄹ',
+    },
+    joy: '拼字肌肉開始發熱了。下一步：把字收進單字路徑。',
+  },
+  {
+    id: 'vocab-hello',
+    stage: 'vocab',
+    order: 5,
+    title: '單字：打招呼的溫度',
+    titleKo: '인사 단어',
+    minutes: 10,
+    summary: '聲音和拼字穩了，開始收單字。今天五個見面就用得到的詞。',
+    points: [
+      '안녕하세요＝標準問候',
+      '謝謝有正式／隨和兩種溫度',
+      '閃卡：先聽 → 猜 → 翻開',
+    ],
+    teach: [
+      { ko: '안녕하세요', zh: '你好（禮貌）', roman: 'annyeonghaseyo' },
+      { ko: '안녕', zh: '嗨／掰', roman: 'annyeong' },
+      { ko: '감사합니다', zh: '謝謝（正式）', roman: 'gamsahamnida' },
+      { ko: '고마워', zh: '謝謝（親）', roman: 'gomawo' },
+      { ko: '네', zh: '是／好的', roman: 'ne' },
+    ],
+    practice: {
+      kind: 'flash',
+      prompt: '閃卡練習：先想意思，再翻開。全部看過就算完成。',
+      answer: 'done',
+    },
+    joy: '單字路徑第一站完成。明天還可以再收一批。',
+  },
+  {
+    id: 'vocab-me',
+    stage: 'vocab',
+    order: 6,
+    title: '單字：我是誰',
+    titleKo: '자기소개',
+    minutes: 10,
+    summary: '自我介紹超短版——名字、我、韓國／台灣。',
+    points: [
+      '저＝禮貌的「我」',
+      '입니다＝正式「是」',
+      '先背塊，再慢慢拆文法',
+    ],
+    teach: [
+      { ko: '저', zh: '我（禮貌）', roman: 'jeo' },
+      { ko: '이름', zh: '名字', roman: 'ireum' },
+      { ko: '입니다', zh: '是（正式）', roman: 'imnida' },
+      { ko: '한국', zh: '韓國', roman: 'hanguk' },
+      { ko: '대만', zh: '台灣', roman: 'daeman' },
+    ],
+    practice: {
+      kind: 'spell',
+      prompt: '看中文打韓文。',
+      clueZh: '韓國',
+      answer: '한국',
+      hint: 'han-guk',
+    },
+    joy: '你可以說：저 ○○입니다。超酷。',
+  },
+  {
+    id: 'vocab-cafe',
+    stage: 'vocab',
+    order: 7,
+    title: '單字：咖啡館生存包',
+    titleKo: '카페 단어',
+    minutes: 10,
+    summary: '點一杯就夠用的詞——生活韓文開始了。',
+    points: [
+      '주세요＝請給我',
+      '아이스＝冰的',
+      '先會點，文法之後補',
+    ],
+    teach: [
+      { ko: '주세요', zh: '請給我', roman: 'juseyo' },
+      { ko: '커피', zh: '咖啡', roman: 'keopi' },
+      { ko: '아이스', zh: '冰的', roman: 'aiseu' },
+      { ko: '물', zh: '水', roman: 'mul' },
+      { ko: '얼마예요', zh: '多少錢？', roman: 'eolmayeyo' },
+    ],
+    practice: {
+      kind: 'pick',
+      prompt: '想說「請給我」，選哪個？',
+      options: ['주세요', '안녕하세요', '네', '이름'],
+      answer: '주세요',
+    },
+    joy: '下一杯，試著說：아이스 커피 주세요。',
+  },
+]
+
+export interface VocabWord {
   id: string
-  name: string
-  nameKo: string
-  blurb: string
-  color: string
-  accent: string
-  lessons: Lesson[]
+  ko: string
+  zh: string
+  roman: string
+  lessonId?: string
 }
 
-export const paths: Path[] = [
+export const vocabBank: VocabWord[] = lessons
+  .filter((l) => l.stage === 'vocab')
+  .flatMap((l) =>
+    l.teach.map((t, i) => ({
+      id: `${l.id}-${i}`,
+      ko: t.ko,
+      zh: t.zh,
+      roman: t.roman ?? '',
+      lessonId: l.id,
+    })),
+  )
+
+export interface PathDay {
+  day: number
+  title: string
+  tip: string
+  lessonIds: string[]
+  focus: Stage
+}
+
+/** 線性路徑：九音 → 子音 → 拼字 → 單字（對齊德文單字路徑節奏） */
+export const pathDays: PathDay[] = [
   {
-    id: 'hangul',
-    name: '字母散步',
-    nameKo: '한글 산책',
-    blurb: '把韓文字母當成風景——看、聽、拼，不背到崩潰。',
-    color: '#3D7A6A',
-    accent: '#E8F4F0',
-    lessons: [
-      {
-        id: 'vowels-1',
-        title: '十個元音，像呼吸一樣',
-        titleKo: '모음 숨쉬기',
-        minutes: 8,
-        mood: '慢 · 輕 · 開口',
-        story:
-          '韓文的元音有方向感：ㅏ 像張嘴向右，ㅓ 像往左收。今天只認識聲音，不考試、不計時。',
-        teach: [
-          { ko: 'ㅏ', zh: '啊（a）', roman: 'a', note: '嘴角微開，像說「啊哈」' },
-          { ko: 'ㅓ', zh: '呃（eo）', roman: 'eo', note: '比「喔」更扁一點' },
-          { ko: 'ㅗ', zh: '喔（o）', roman: 'o', note: '嘴唇圓圓，像吹氣' },
-          { ko: 'ㅜ', zh: '嗚（u）', roman: 'u', note: '嘴巴嘟起' },
-          { ko: 'ㅡ', zh: '嗯（eu）', roman: 'eu', note: '嘴扁平，像微笑的線' },
-          { ko: 'ㅣ', zh: '衣（i）', roman: 'i', note: '一條豎線，聲音明亮' },
-        ],
-        practice: {
-          kind: 'match',
-          prompt: '把聲音和字母輕輕連起來——錯了也沒關係，再點一次就好。',
-          pairs: [
-            { left: 'ㅏ', right: 'a · 啊' },
-            { left: 'ㅗ', right: 'o · 喔' },
-            { left: 'ㅣ', right: 'i · 衣' },
-            { left: 'ㅜ', right: 'u · 嗚' },
-          ],
-          answer: 'matched',
-        },
-        joy: '你剛認識了六個元音。花園裡長出一株小小的「ㅏ」。',
-      },
-      {
-        id: 'consonants-1',
-        title: '子音像積木',
-        titleKo: '자음 쌓기',
-        minutes: 10,
-        mood: '玩 · 拼 · 鬆',
-        story:
-          'ㄱ ㅋ ㄲ 是一家人：普通、送氣、緊音。今天只玩「ㄱ」家族和幾個好朋友。',
-        teach: [
-          { ko: 'ㄱ', zh: 'g/k', roman: 'g', note: '像槍的準星，輕碰軟顎' },
-          { ko: 'ㄴ', zh: 'n', roman: 'n', note: '像跪著的人' },
-          { ko: 'ㅁ', zh: 'm', roman: 'm', note: '方方的嘴巴' },
-          { ko: 'ㅅ', zh: 's', roman: 's', note: '尖尖的牙齒' },
-          { ko: 'ㅇ', zh: '沉默 / ng', roman: 'ng', note: '開頭沒聲音，結尾是 ng' },
-          { ko: 'ㅂ', zh: 'b/p', roman: 'b', note: '像桌子' },
-        ],
-        practice: {
-          kind: 'pick',
-          prompt: '「媽媽」的開頭音是哪個？',
-          promptKo: '엄마의 첫소리',
-          options: ['ㅁ', 'ㄱ', 'ㅅ', 'ㅂ'],
-          answer: 'ㅁ',
-          hint: '엄마 = eom-ma，嘴唇合起來的那個。',
-        },
-        joy: '積木堆好了。下次可以把子音和元音拼成真正的字。',
-      },
-      {
-        id: 'syllable-1',
-        title: '第一個字：나',
-        titleKo: '첫 글자',
-        minutes: 12,
-        mood: '驚喜 · 拼字',
-        story:
-          '韓文一格一音節：左邊或上面是子音，右邊或下面是元音。나 = ㄴ + ㅏ =「我」。',
-        teach: [
-          { ko: '나', zh: '我', roman: 'na', note: 'ㄴ + ㅏ' },
-          { ko: '너', zh: '你（隨和）', roman: 'neo', note: 'ㄴ + ㅓ' },
-          { ko: '고', zh: '且 / 去的詞幹', roman: 'go', note: 'ㄱ + ㅗ' },
-          { ko: '미', zh: '美（音譯）', roman: 'mi', note: 'ㅁ + ㅣ' },
-          { ko: '수', zh: '水 / 數字的音', roman: 'su', note: 'ㅅ + ㅜ' },
-          { ko: '이', zh: '這 / 牙齒', roman: 'i', note: 'ㅇ（無聲）+ ㅣ' },
-        ],
-        practice: {
-          kind: 'build',
-          prompt: '拼出「我」——選對積木就好。',
-          promptKo: '나',
-          syllables: ['ㄴ', 'ㅏ', 'ㅁ', 'ㅓ', 'ㄱ'],
-          answer: 'ㄴㅏ',
-          hint: '子音在左，元音在右：ㄴ + ㅏ',
-        },
-        joy: '你寫出了나。從今天起，你可以指著自己說：나。',
-      },
-    ],
+    day: 1,
+    title: 'Day 1 · 九音',
+    tip: '今天只做母音。聽、對嘴型，別急著背整張表。',
+    lessonIds: ['sound-nine'],
+    focus: 'sounds',
   },
   {
-    id: 'daily',
-    name: '日常小句',
-    nameKo: '하루 한마디',
-    blurb: '一句就夠用一天。吃飯、打招呼、說謝謝——生活就會韓文。',
-    color: '#C45C4A',
-    accent: '#FCEDEB',
-    lessons: [
-      {
-        id: 'hello',
-        title: '打招呼的溫度',
-        titleKo: '인사 온도',
-        minutes: 7,
-        mood: '暖 · 禮貌',
-        story:
-          '안녕하세요是標準問候。對朋友可以说안녕。語氣比背誦重要——微笑著說就對了。',
-        teach: [
-          { ko: '안녕하세요', zh: '你好（禮貌）', roman: 'annyeonghaseyo', note: '白天Anytime可用' },
-          { ko: '안녕', zh: '嗨 / 掰（親）', roman: 'annyeong', note: '朋友之間' },
-          { ko: '감사합니다', zh: '謝謝（正式）', roman: 'gamsahamnida' },
-          { ko: '고마워', zh: '謝謝（親）', roman: 'gomawo' },
-        ],
-        practice: {
-          kind: 'echo',
-          prompt: '跟著念一次，然後選出「正式謝謝」。',
-          promptKo: '감사합니다',
-          options: ['고마워', '감사합니다', '안녕', '미안'],
-          answer: '감사합니다',
-        },
-        joy: '你有了開門的鑰匙。見人先說안녕하세요，世界會對你笑。',
-      },
-      {
-        id: 'cafe',
-        title: '咖啡館一句話',
-        titleKo: '카페 한 잔',
-        minutes: 9,
-        mood: '香 · 日常',
-        story: '韓國咖啡館密度超高。學會點一杯，散步就有藉口停下來。',
-        teach: [
-          { ko: '아이스 아메리카노 주세요', zh: '請給我冰美式', roman: 'aiseu amerikano juseyo' },
-          { ko: '따뜻하게 해주세요', zh: '請做成熱的', roman: 'ttatteuthage haejuseyo' },
-          { ko: '얼마예요?', zh: '多少錢？', roman: 'eolmayeyo' },
-          { ko: '여기서 먹을게요', zh: '我在這裡喝', roman: 'yeogiseo meogeulgeyo' },
-        ],
-        practice: {
-          kind: 'pick',
-          prompt: '你想要冰美式，該說哪句？',
-          options: [
-            '아이스 아메리카노 주세요',
-            '얼마예요?',
-            '안녕하세요',
-            '고마워',
-          ],
-          answer: '아이스 아메리카노 주세요',
-        },
-        joy: '下一杯咖啡，可以試著用韓文點。店員聽得懂就夠了。',
-      },
-      {
-        id: 'feelings',
-        title: '開心也要說出來',
-        titleKo: '기쁜 마음',
-        minutes: 8,
-        mood: '快樂 · 表達',
-        story: '這堂系不考試，但鼓勵你說「我開心」。語言是為了感覺，不是分數。',
-        teach: [
-          { ko: '좋아요', zh: '喜歡 / 很好', roman: 'joayo' },
-          { ko: '행복해요', zh: '我很幸福', roman: 'haengbokhaeyo' },
-          { ko: '재밌어요', zh: '很好玩', roman: 'jaemisseoyo' },
-          { ko: '사랑해요', zh: '我愛你 / 我愛這個', roman: 'saranghaeyo', note: '對人、對事物都能用得溫柔' },
-        ],
-        practice: {
-          kind: 'match',
-          prompt: '把心情對上句子。',
-          pairs: [
-            { left: '좋아요', right: '喜歡 / 很好' },
-            { left: '행복해요', right: '我很幸福' },
-            { left: '재밌어요', right: '很好玩' },
-            { left: '사랑해요', right: '我愛……' },
-          ],
-          answer: 'matched',
-        },
-        joy: '今天學完，對自己說一次：행복해요。這就是這堂課的全部成績。',
-      },
-    ],
+    day: 2,
+    title: 'Day 2 · 子音積木',
+    tip: '把子音當積木認臉。拼字明天才上場。',
+    lessonIds: ['sound-consonants'],
+    focus: 'sounds',
   },
   {
-    id: 'lit',
-    name: '文學小徑',
-    nameKo: '문학 오솔길',
-    blurb: '短詩、歌詞、一句小說——韓文學系的浪漫，不用寫報告。',
-    color: '#2C4A6E',
-    accent: '#EAF0F7',
-    lessons: [
-      {
-        id: 'spring-poem',
-        title: '春日一行詩',
-        titleKo: '봄 한 줄',
-        minutes: 10,
-        mood: '詩 · 慢讀',
-        story:
-          '尹東柱《序詩》開頭：「죽는 날까지 하늘을 우러러…」我們只取溫柔的意象，慢慢讀音與意思。',
-        teach: [
-          { ko: '하늘', zh: '天空', roman: 'haneul' },
-          { ko: '바람', zh: '風', roman: 'baram' },
-          { ko: '별', zh: '星星', roman: 'byeol' },
-          { ko: '봄', zh: '春天', roman: 'bom' },
-          { ko: '마음', zh: '心', roman: 'maeum' },
-        ],
-        practice: {
-          kind: 'pick',
-          prompt: '「星星」用韓文怎麼說？',
-          options: ['별', '바람', '하늘', '봄'],
-          answer: '별',
-        },
-        joy: '你口袋裡多了五個詩的詞。晚上看天，可以想：별。',
-      },
-      {
-        id: 'song-line',
-        title: '歌詞當課本',
-        titleKo: '가사 교과서',
-        minutes: 8,
-        mood: '聽 · 跟唱',
-        story: 'K-pop 是合法外掛。選一句反覆聽，比單字卡記得更牢，而且比較開心。',
-        teach: [
-          { ko: '너를 사랑해', zh: '我愛你', roman: 'neoreul saranghae' },
-          { ko: '오늘 밤', zh: '今晚', roman: 'oneul bam' },
-          { ko: '함께', zh: '一起', roman: 'hamkke' },
-          { ko: '춤추자', zh: '一起跳舞吧', roman: 'chumchuja' },
-        ],
-        practice: {
-          kind: 'echo',
-          prompt: '選出「一起」的韓文。',
-          promptKo: '함께',
-          options: ['오늘 밤', '함께', '춤추자', '하늘'],
-          answer: '함께',
-        },
-        joy: '下次聽歌，抓住一個詞就暫停——那是你的私人課堂。',
-      },
-      {
-        id: 'novel-sip',
-        title: '小說一口',
-        titleKo: '소설 한 모금',
-        minutes: 11,
-        mood: '故事 · 沉浸',
-        story:
-          '韓文學系不必一次讀完一本。今天只品一小段：人物怎麼問好、怎麼告別。',
-        teach: [
-          { ko: '그는 웃었다', zh: '他笑了', roman: 'geuneun useotda' },
-          { ko: '문이 열렸다', zh: '門開了', roman: 'muni yeollyeotda' },
-          { ko: '밤이 깊었다', zh: '夜深了', roman: 'bami gipeotda' },
-          { ko: '그래도 괜찮다', zh: '即使如此也沒關係', roman: 'geuraedo gwaenchanta' },
-        ],
-        practice: {
-          kind: 'match',
-          prompt: '把句子與意思配對。',
-          pairs: [
-            { left: '그는 웃었다', right: '他笑了' },
-            { left: '문이 열렸다', right: '門開了' },
-            { left: '밤이 깊었다', right: '夜深了' },
-            { left: '그래도 괜찮다', right: '也沒關係' },
-          ],
-          answer: 'matched',
-        },
-        joy: '韓文學系的精神：讀一行就夠美。明天還可以再讀一行。',
-      },
-    ],
+    day: 3,
+    title: 'Day 3 · 拼出第一格',
+    tip: '子音＋母音＝一格。拼對나 就過關。',
+    lessonIds: ['spell-syllable'],
+    focus: 'spelling',
+  },
+  {
+    day: 4,
+    title: 'Day 4 · 拼字小測驗',
+    tip: '看中文打韓文——和德文今日拼字同一肌肉。',
+    lessonIds: ['spell-type'],
+    focus: 'spelling',
+  },
+  {
+    day: 5,
+    title: 'Day 5 · 單字：打招呼',
+    tip: '正式收單字。閃卡聽完再翻。',
+    lessonIds: ['vocab-hello'],
+    focus: 'vocab',
+  },
+  {
+    day: 6,
+    title: 'Day 6 · 單字：我是誰',
+    tip: '自我介紹五個詞，拼一個「韓國」。',
+    lessonIds: ['vocab-me'],
+    focus: 'vocab',
+  },
+  {
+    day: 7,
+    title: 'Day 7 · 單字：咖啡館',
+    tip: '生活場景詞。學完可以點一杯。',
+    lessonIds: ['vocab-cafe'],
+    focus: 'vocab',
   },
 ]
 
-export const manifesto = [
-  '沒有考試',
-  '沒有倒數計時',
-  '錯了可以重來',
-  '進度是花園，不是分數',
-  '一天一句，也算優秀',
-]
+export function getLesson(id: string) {
+  return lessons.find((l) => l.id === id)
+}
 
-export function getLesson(pathId: string, lessonId: string) {
-  const path = paths.find((p) => p.id === pathId)
-  const lesson = path?.lessons.find((l) => l.id === lessonId)
-  return { path, lesson }
+export function lessonsByStage(stage: Stage) {
+  return lessons.filter((l) => l.stage === stage).sort((a, b) => a.order - b.order)
 }
 
 export function totalLessons() {
-  return paths.reduce((n, p) => n + p.lessons.length, 0)
+  return lessons.length
+}
+
+export function nextIncomplete(completed: string[]) {
+  for (const day of pathDays) {
+    for (const id of day.lessonIds) {
+      if (!completed.includes(id)) return { day, lesson: getLesson(id)! }
+    }
+  }
+  return null
 }

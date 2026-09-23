@@ -1,33 +1,27 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { getLesson } from '../data/curriculum'
+import type { Lesson } from '../data/curriculum'
 import { Practice } from './Practice'
+import { speakKo } from '../lib/speech'
 
 interface Props {
-  pathId: string
-  lessonId: string
+  lesson: Lesson
   alreadyDone: boolean
   onBack: () => void
   onComplete: (lessonId: string) => void
 }
 
-export function LessonView({ pathId, lessonId, alreadyDone, onBack, onComplete }: Props) {
-  const { path, lesson } = getLesson(pathId, lessonId)
-  const [solved, setSolved] = useState(alreadyDone)
+export function LessonView({ lesson, alreadyDone, onBack, onComplete }: Props) {
+  const [practiced, setPracticed] = useState(alreadyDone)
+  const [marked, setMarked] = useState(alreadyDone)
 
-  if (!path || !lesson) {
-    return (
-      <div className="lesson-page">
-        <button type="button" className="back-btn" onClick={onBack}>
-          ← 回去
-        </button>
-        <p>找不到這堂課。</p>
-      </div>
-    )
-  }
+  const stageLabel =
+    lesson.stage === 'sounds' ? '九音／發音' : lesson.stage === 'spelling' ? '拼字' : '單字'
 
-  const finish = () => {
-    setSolved(true)
+  const finishPractice = () => setPracticed(true)
+
+  const markLearned = () => {
+    setMarked(true)
     onComplete(lesson.id)
   }
 
@@ -39,14 +33,23 @@ export function LessonView({ pathId, lessonId, alreadyDone, onBack, onComplete }
       transition={{ duration: 0.4 }}
     >
       <button type="button" className="back-btn" onClick={onBack}>
-        ← {path.name}
+        ← 回自學
       </button>
 
-      <p className="lesson-mood">{lesson.mood} · 約 {lesson.minutes} 分鐘</p>
+      <p className="lesson-mood">
+        {stageLabel} · 約 {lesson.minutes} 分鐘
+      </p>
       <h1 className="lesson-title">{lesson.title}</h1>
       <p className="lesson-title-ko">{lesson.titleKo}</p>
-      <p className="lesson-story">{lesson.story}</p>
+      <p className="lesson-story">{lesson.summary}</p>
 
+      <ul className="point-list">
+        {lesson.points.map((p) => (
+          <li key={p}>{p}</li>
+        ))}
+      </ul>
+
+      <h2 className="block-title">先教 · 聽一聽</h2>
       <div className="teach-grid">
         {lesson.teach.map((row) => (
           <motion.div
@@ -57,7 +60,14 @@ export function LessonView({ pathId, lessonId, alreadyDone, onBack, onComplete }
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.35 }}
           >
-            <span className="teach-ko">{row.ko}</span>
+            <button
+              type="button"
+              className="teach-ko speakable"
+              onClick={() => speakKo(row.ko)}
+              title="點我發音"
+            >
+              {row.ko}
+            </button>
             <div>
               <p className="teach-zh">{row.zh}</p>
               <p className="teach-meta">
@@ -69,23 +79,30 @@ export function LessonView({ pathId, lessonId, alreadyDone, onBack, onComplete }
         ))}
       </div>
 
+      <h2 className="block-title">再練 · 不用考試</h2>
       <Practice
         key={lesson.id}
         practice={lesson.practice}
-        accent={path.accent}
-        onSolved={finish}
+        teach={lesson.teach}
+        onSolved={finishPractice}
       />
 
-      {solved && (
+      {practiced && (
         <motion.div
           className="joy-banner"
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
         >
           <p>{lesson.joy}</p>
-          <button type="button" className="btn-primary" onClick={onBack}>
-            回小徑 · 花園又多一朵
-          </button>
+          {!marked ? (
+            <button type="button" className="btn-primary" onClick={markLearned}>
+              標記我會了
+            </button>
+          ) : (
+            <button type="button" className="btn-primary" onClick={onBack}>
+              回今日進度 · 花園又多一朵
+            </button>
+          )}
         </motion.div>
       )}
     </motion.div>

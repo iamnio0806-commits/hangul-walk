@@ -1,39 +1,145 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Home } from './components/Home'
-import { PathView } from './components/PathView'
+import { TodayPanel, StagePanel } from './components/LearnHub'
 import { LessonView } from './components/LessonView'
+import { Garden } from './components/Garden'
 import { useProgress } from './hooks/useProgress'
-import { paths } from './data/curriculum'
+import { getLesson, totalLessons, type Stage } from './data/curriculum'
 
+type Tab = 'today' | Stage | 'garden'
 type Screen =
-  | { kind: 'home' }
-  | { kind: 'path'; pathId: string }
-  | { kind: 'lesson'; pathId: string; lessonId: string }
+  | { kind: 'hub'; tab: Tab }
+  | { kind: 'lesson'; lessonId: string; from: Tab }
+
+const tabs: { id: Tab; label: string }[] = [
+  { id: 'today', label: '今日' },
+  { id: 'sounds', label: '九音' },
+  { id: 'spelling', label: '拼字' },
+  { id: 'vocab', label: '單字' },
+  { id: 'garden', label: '花園' },
+]
 
 export default function App() {
-  const { state, isDone, complete, setName, ratio } = useProgress()
-  const [screen, setScreen] = useState<Screen>({ kind: 'home' })
+  const { state, isDone, complete, markDay, setName, ratio } = useProgress()
+  const [screen, setScreen] = useState<Screen>({ kind: 'hub', tab: 'today' })
   const [showName, setShowName] = useState(false)
   const [draftName, setDraftName] = useState('')
+  const [welcomed, setWelcomed] = useState(() => {
+    try {
+      return localStorage.getItem('hangul-walk-welcomed') === '1'
+    } catch {
+      return false
+    }
+  })
 
-  const goHome = () => setScreen({ kind: 'home' })
+  const tab = screen.kind === 'hub' ? screen.tab : screen.from
 
-  const startWalk = () => {
+  const openLesson = (lessonId: string) => {
+    setScreen({ kind: 'lesson', lessonId, from: tab === 'garden' ? 'today' : tab })
+  }
+
+  const goTab = (t: Tab) => setScreen({ kind: 'hub', tab: t })
+
+  const enter = () => {
     if (!state.name) {
       setShowName(true)
       return
     }
-    document.getElementById('paths')?.scrollIntoView({ behavior: 'smooth' })
+    try {
+      localStorage.setItem('hangul-walk-welcomed', '1')
+    } catch {
+      /* ignore */
+    }
+    setWelcomed(true)
   }
 
-  const confirmName = () => {
-    const n = draftName.trim() || '漫步者'
-    setName(n)
+  const confirmName = (anon = false) => {
+    setName(anon ? '漫步者' : draftName.trim() || '漫步者')
     setShowName(false)
-    setTimeout(() => {
-      document.getElementById('paths')?.scrollIntoView({ behavior: 'smooth' })
-    }, 100)
+    try {
+      localStorage.setItem('hangul-walk-welcomed', '1')
+    } catch {
+      /* ignore */
+    }
+    setWelcomed(true)
+  }
+
+  if (!welcomed) {
+    return (
+      <div className="app">
+        <div className="atmosphere" aria-hidden />
+        <div className="shell">
+          <nav className="topnav">
+            <div className="brand-mark">
+              한글산책
+              <span>韓文散步</span>
+            </div>
+          </nav>
+          <section className="hero">
+            <div className="hero-visual" aria-hidden>
+              <div className="hero-wash" />
+            </div>
+            <div className="hero-content">
+              <motion.h1
+                className="hero-brand"
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+              >
+                한글산책
+              </motion.h1>
+              <p className="hero-brand-sub">韓文散步</p>
+              <p className="hero-line">先九音，再拼字，再單字。沒有考試。</p>
+              <p className="hero-support">
+                跟你的德文自學同一套節奏：先把聲音聽熟 → 拼出音節 → 一批一批收單字。做完自己按「我會了」。
+              </p>
+              <div className="cta-row">
+                <button type="button" className="btn-primary" onClick={enter}>
+                  從九音開始
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <AnimatePresence>
+          {showName && (
+            <motion.div
+              className="modal-scrim"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setShowName(false)}
+            >
+              <motion.div
+                className="name-gate"
+                initial={{ scale: 0.96, y: 12 }}
+                animate={{ scale: 1, y: 0 }}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <h2>怎麼稱呼你？</h2>
+                <p>寫在花園牌子上。不想留名也可以。</p>
+                <input
+                  value={draftName}
+                  onChange={(e) => setDraftName(e.target.value)}
+                  placeholder="例如：민지、阿明"
+                  maxLength={12}
+                  onKeyDown={(e) => e.key === 'Enter' && confirmName()}
+                  autoFocus
+                />
+                <div className="cta-row" style={{ justifyContent: 'center' }}>
+                  <button type="button" className="btn-primary" onClick={() => confirmName()}>
+                    走進系館
+                  </button>
+                  <button type="button" className="btn-ghost" onClick={() => confirmName(true)}>
+                    匿名散步
+                  </button>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    )
   }
 
   return (
@@ -41,147 +147,105 @@ export default function App() {
       <div className="atmosphere" aria-hidden />
       <div className="shell">
         <nav className="topnav">
-          <button type="button" className="brand-mark" onClick={goHome}>
+          <button type="button" className="brand-mark" onClick={() => goTab('today')}>
             한글산책
             <span>韓文散步</span>
           </button>
           <div className="nav-actions">
-            {screen.kind !== 'home' && (
-              <button type="button" className="nav-link" onClick={goHome}>
-                回首頁
-              </button>
-            )}
-            <span className="bloom-pill" title="花園花朵數">
-              {state.blooms} 朵
-            </span>
+            <span className="bloom-pill">{state.blooms} 朵</span>
           </div>
         </nav>
 
+        <div className="tabbar" role="tablist">
+          {tabs.map((t) => (
+            <button
+              key={t.id}
+              type="button"
+              role="tab"
+              aria-selected={tab === t.id && screen.kind === 'hub'}
+              className={`tab${tab === t.id ? ' active' : ''}`}
+              onClick={() => goTab(t.id)}
+            >
+              {t.label}
+            </button>
+          ))}
+        </div>
+
         <AnimatePresence mode="wait">
-          {screen.kind === 'home' && (
+          {screen.kind === 'hub' && screen.tab === 'today' && (
             <motion.div
-              key="home"
+              key="today"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
             >
-              <Home
-                blooms={state.blooms}
-                ratio={ratio}
+              <TodayPanel
+                completed={state.completed}
+                daysDone={state.daysDone}
                 name={state.name}
-                onStart={startWalk}
-                onOpenPath={(pathId) => setScreen({ kind: 'path', pathId })}
+                onOpenLesson={openLesson}
+                onMarkDay={markDay}
+                onOpenStage={(s) => goTab(s)}
               />
             </motion.div>
           )}
 
-          {screen.kind === 'path' && (
+          {screen.kind === 'hub' &&
+            (screen.tab === 'sounds' || screen.tab === 'spelling' || screen.tab === 'vocab') && (
+              <motion.div
+                key={screen.tab}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <StagePanel
+                  stage={screen.tab}
+                  completed={state.completed}
+                  onOpenLesson={openLesson}
+                  onBack={() => goTab('today')}
+                />
+              </motion.div>
+            )}
+
+          {screen.kind === 'hub' && screen.tab === 'garden' && (
             <motion.div
-              key={`path-${screen.pathId}`}
+              key="garden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
             >
-              <PathView
-                pathId={screen.pathId}
-                isDone={isDone}
-                onBack={goHome}
-                onOpenLesson={(lessonId) =>
-                  setScreen({ kind: 'lesson', pathId: screen.pathId, lessonId })
-                }
+              <Garden
+                blooms={state.blooms}
+                total={totalLessons()}
+                name={state.name}
+                ratio={ratio}
               />
             </motion.div>
           )}
 
           {screen.kind === 'lesson' && (
             <motion.div
-              key={`lesson-${screen.lessonId}`}
+              key={screen.lessonId}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
             >
-              <LessonView
-                pathId={screen.pathId}
-                lessonId={screen.lessonId}
-                alreadyDone={isDone(screen.lessonId)}
-                onBack={() => setScreen({ kind: 'path', pathId: screen.pathId })}
-                onComplete={complete}
-              />
+              {(() => {
+                const lesson = getLesson(screen.lessonId)
+                if (!lesson) return <p className="hub-panel">找不到這堂課。</p>
+                return (
+                  <LessonView
+                    lesson={lesson}
+                    alreadyDone={isDone(lesson.id)}
+                    onBack={() => goTab(screen.from)}
+                    onComplete={complete}
+                  />
+                )
+              })()}
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-
-      <AnimatePresence>
-        {showName && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            style={{
-              position: 'fixed',
-              inset: 0,
-              zIndex: 50,
-              background: 'rgba(26, 36, 32, 0.35)',
-              display: 'grid',
-              placeItems: 'center',
-              padding: '1.5rem',
-            }}
-            onClick={() => setShowName(false)}
-          >
-            <motion.div
-              className="name-gate"
-              style={{
-                background: 'var(--paper)',
-                borderRadius: 4,
-                boxShadow: 'var(--shadow)',
-                margin: 0,
-                padding: '2.5rem 1.75rem',
-              }}
-              initial={{ scale: 0.96, y: 12 }}
-              animate={{ scale: 1, y: 0 }}
-              exit={{ scale: 0.96, opacity: 0 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <h2>怎麼稱呼你？</h2>
-              <p>寫在花園牌子上就好。不想留名也可以直接散步。</p>
-              <input
-                value={draftName}
-                onChange={(e) => setDraftName(e.target.value)}
-                placeholder="例如：민지、阿明"
-                maxLength={12}
-                onKeyDown={(e) => e.key === 'Enter' && confirmName()}
-                autoFocus
-              />
-              <div className="cta-row" style={{ justifyContent: 'center' }}>
-                <button type="button" className="btn-primary" onClick={confirmName}>
-                  走進系館
-                </button>
-                <button
-                  type="button"
-                  className="btn-ghost"
-                  onClick={() => {
-                    setName('漫步者')
-                    setShowName(false)
-                    setTimeout(() => {
-                      document.getElementById('paths')?.scrollIntoView({ behavior: 'smooth' })
-                    }, 100)
-                  }}
-                >
-                  匿名散步
-                </button>
-              </div>
-              <p style={{ marginTop: '1.25rem', fontSize: '0.8rem' }}>
-                目前有 {paths.length} 條小徑、共可種 {paths.reduce((n, p) => n + p.lessons.length, 0)}{' '}
-                朵花
-              </p>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   )
 }

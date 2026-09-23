@@ -1,13 +1,14 @@
 import { useCallback, useEffect, useState } from 'react'
 import { totalLessons } from '../data/curriculum'
 
-const KEY = 'hangul-walk-progress-v1'
+const KEY = 'hangul-walk-progress-v2'
 
 export interface ProgressState {
   completed: string[]
   blooms: number
   lastVisit: string | null
   name: string
+  daysDone: number[]
 }
 
 const defaultState: ProgressState = {
@@ -15,6 +16,7 @@ const defaultState: ProgressState = {
   blooms: 0,
   lastVisit: null,
   name: '',
+  daysDone: [],
 }
 
 function load(): ProgressState {
@@ -58,6 +60,13 @@ export function useProgress() {
     })
   }, [])
 
+  const markDay = useCallback((day: number) => {
+    setState((prev) => {
+      if (prev.daysDone.includes(day)) return prev
+      return { ...prev, daysDone: [...prev.daysDone, day] }
+    })
+  }, [])
+
   const setName = useCallback((name: string) => {
     setState((prev) => ({ ...prev, name }))
   }, [])
@@ -68,5 +77,5 @@ export function useProgress() {
 
   const ratio = state.completed.length / Math.max(totalLessons(), 1)
 
-  return { state, ready, isDone, complete, setName, reset, ratio }
+  return { state, ready, isDone, complete, markDay, setName, reset, ratio }
 }
